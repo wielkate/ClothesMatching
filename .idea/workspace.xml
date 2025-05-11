@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/just.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/Mode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/just.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/TodoApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,16 +222,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add basic UI" />
     <option name="LAST_COMMIT_MESSAGE" value="Add basic UI" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/package_wielkate/main/App.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

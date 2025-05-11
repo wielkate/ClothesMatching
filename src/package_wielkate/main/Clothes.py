@@ -28,6 +28,6 @@ class Clothes:
             item['color'] = new_color_name
             self.__save__()
 
-    def delete(self, id: int) -> None:
+    def delete(self, id: str) -> None:
         self.list = [item for item in self.list if item['id'] != id]
         self.__save__()

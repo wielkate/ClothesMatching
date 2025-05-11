@@ -1,44 +1,26 @@
 from flet import *
 
+from commons import global_colors
+from Mode import Mode
 
 class Card(Column):
-    def __init__(self, delete_card, filename, color_name):
+    def __init__(self, delete_card_action, edit_card_action, filename, color_name):
         super().__init__()
-
+        self.mode = None
         self.filename = filename
-        self.original_color_name = color_name
-        self.edit_color_name = TextField(
-            border=InputBorder.UNDERLINE,
-            color=Colors.WHITE)
+        self.color_name = color_name
 
-        self.delete_card = delete_card
-        self.display_card = self.create_card_with_name(self.original_color_name)
+        self.color_options = self.create_color_options()
+        self.mode_options = self.create_mode_options()
 
-        self.display_view = Row(
-            alignment=MainAxisAlignment.SPACE_BETWEEN,
-            vertical_alignment=CrossAxisAlignment.CENTER,
-            controls=[
-                self.display_card
-            ],
-        )
+        self.delete_card_action = delete_card_action
+        self.edit_card_action = edit_card_action
 
-        self.edit_view = Row(
-            visible=False,
-            alignment=MainAxisAlignment.SPACE_BETWEEN,
-            vertical_alignment=CrossAxisAlignment.CENTER,
-            controls=[
-                self.edit_color_name,
-                IconButton(
-                    icon=Icons.DONE_OUTLINE_OUTLINED,
-                    icon_color=Colors.GREEN,
-                    tooltip="Save",
-                    on_click=self.save_color_name_clicked,
-                ),
-            ],
-        )
-        self.controls = [self.display_view, self.edit_view]
+        self.display_card = self.create_display_card()
 
-    def create_card_with_name(self, color_name):
+        self.controls = [self.display_card, self.color_options, self.mode_options]
+
+    def create_display_card(self):
         return Container(
             width=324,
             height=636,
@@ -87,7 +69,7 @@ class Card(Column):
                             spacing=10,
                             controls=[
                                 Text(
-                                    color_name,
+                                    self.color_name,
                                     color=Colors.WHITE,
                                     text_align=TextAlign.CENTER,
                                     size=20,
@@ -104,7 +86,7 @@ class Card(Column):
                                         IconButton(
                                             icon=Icons.DONE_OUTLINED,
                                             tooltip="Choose",
-                                            # on_click=self,
+                                            on_click=self.choose_clicked,
                                         ),
                                         IconButton(
                                             icon=Icons.DELETE_OUTLINE,
@@ -120,17 +102,81 @@ class Card(Column):
             ),
         )
 
+    def create_color_options(self):
+        return SearchBar(
+            visible=False,
+            view_leading=IconButton(
+                icon=Icons.ARROW_BACK,
+                tooltip="Back",
+                on_click=self.colors_back_clicked
+            ),
+            controls=[
+                ListTile(title=Text(
+                    value=color.name,
+                    text_align=TextAlign.CENTER,
+                ),
+                    on_click=self.select_color,
+                    data=color.name,
+                )
+                for color in global_colors
+            ],
+        )
+
+    def create_mode_options(self):
+        return SearchBar(
+            visible=False,
+            view_leading=IconButton(
+                icon=Icons.ARROW_BACK,
+                tooltip="Back",
+                on_click=self.modes_back_clicked
+            ),
+            controls=[
+                ListTile(title=Text(
+                    value=mode.value,
+                    text_align=TextAlign.CENTER,
+                ),
+                    on_click=self.select_mode,
+                    data=mode.value,
+                )
+                for mode in Mode
+            ],
+        )
+
     def edit_clicked(self, e):
-        self.edit_color_name.value = self.display_card.content.controls[2].content.controls[0].value
-        self.display_view.visible = False
-        self.edit_view.visible = True
+        self.color_options.visible = True
+        self.color_options.open_view()
         self.update()
 
-    def save_color_name_clicked(self, e):
-        self.display_card.content.controls[2].content.controls[0].value = self.edit_color_name.value
-        self.display_view.visible = True
-        self.edit_view.visible = False
+    def choose_clicked(self, e):
+        self.mode_options.visible = True
+        self.mode_options.open_view()
+        self.update()
+
+    def select_color(self, e):
+        selected_color = e.control.data
+        self.display_card.content.controls[2].content.controls[0].value = selected_color
+        self.color_name = selected_color
+        self.color_options.close_view(selected_color)
+        self.color_options.visible = False
+        self.edit_card_action(self)
+        self.update()
+
+    def select_mode(self, e):
+        selected_mode = e.control.data
+        self.mode = selected_mode
+        self.mode_options.close_view(selected_mode)
+        self.mode_options.visible = False
+        self.update()
+
+    def colors_back_clicked(self, e):
+        self.color_options.close_view()
+        self.color_options.visible = False
+        self.update()
+
+    def modes_back_clicked(self, e):
+        self.mode_options.close_view()
+        self.mode_options.visible = False
         self.update()
 
     def delete_clicked(self, e):
-        self.delete_card(self)
+        self.delete_card_action(self)

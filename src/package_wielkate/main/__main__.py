@@ -1,8 +1,10 @@
 from flet import Page, Container, Theme, Colors, CrossAxisAlignment, ClipBehavior, app
 from flet.core import padding, border
+from flet.core.border import BorderSide
 from flet.core.box import BoxConstraints
+from flet.core.buttons import RoundedRectangleBorder
 from flet.core.text_style import TextStyle
-from flet.core.theme import IconButtonTheme, IconTheme, DividerTheme, ListTileTheme, SearchBarTheme, SearchViewTheme
+from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme
 from flet.core.types import FontWeight
 
 from App import App
@@ -25,36 +27,27 @@ def setup(page):
                            font_family=font,
                        )
                        ),
-                       # search_bar_theme=SearchBarTheme(
-                       #     bgcolor=Colors.BLACK,
-                       #     elevation=4,
-                       #     text_style=TextStyle(
-                       #         color=Colors.WHITE,
-                       #         size=20,
-                       #         weight=FontWeight.W_900,
-                       #     ),
-                       #     hint_style=TextStyle(
-                       #         color=Colors.WHITE,
-                       #         size=20,
-                       #         weight=FontWeight.W_900,
-                       #     ),
-                       #     size_constraints=BoxConstraints(min_width=324, max_width=324, max_height=324)
-                       # ),
-                       # search_view_theme=SearchViewTheme(
-                       #     bgcolor=Colors.BLACK,
-                       #     elevation=4,
-                       #     header_hint_text_style=TextStyle(
-                       #         color=Colors.WHITE,
-                       #         size=20,
-                       #         weight=FontWeight.W_900,
-                       #     ),
-                       #     header_text_style=TextStyle(
-                       #         color=Colors.WHITE,
-                       #         size=20,
-                       #         weight=FontWeight.W_900,
-                       #     ),
-                       #     size_constraints=BoxConstraints(min_width=324, max_width=324)
-                       # )
+                       search_view_theme=SearchViewTheme(
+                           bgcolor=Colors.BLACK,
+                           header_hint_text_style=TextStyle(
+                               color=Colors.WHITE,
+                               size=20,
+                               weight=FontWeight.W_900,
+                           ),
+                           header_text_style=TextStyle(
+                               color=Colors.WHITE,
+                               size=20,
+                               weight=FontWeight.W_900,
+                           ),
+
+                           size_constraints=BoxConstraints(min_width=324, max_width=324, min_height=660,
+                                                           max_height=660),
+                           border_side=BorderSide(
+                               width=1,
+                               color=Colors.WHITE,
+                           ),
+                           shape=RoundedRectangleBorder(radius=10)
+                       )
                        )
     page.horizontal_alignment = CrossAxisAlignment.CENTER
     page.vertical_alignment = CrossAxisAlignment.CENTER

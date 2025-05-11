@@ -11,6 +11,7 @@ class App(Column):
         self.scroll = ScrollMode.HIDDEN
         self.expand = True
         self.alignment = MainAxisAlignment.START
+        self.clothes = Clothes()
         self.cards = self.load_clothes_from_memory()
         self.spacing = 15
         self.controls = [
@@ -36,20 +37,22 @@ class App(Column):
         ]
 
     def add_clicked(self, e):
-        card = Card(self.card_delete, "", "")
+        card = Card(self.delete_card, self.edit_card, "", "")
         self.cards.controls.append(card)
         self.update()
 
-    def card_delete(self, card):
+    def delete_card(self, card):
         self.cards.controls.remove(card)
+        self.clothes.delete(card.filename)
         self.update()
 
-    def card_edit(self, e):
+    def edit_card(self, card):
+        self.clothes.edit(card.filename, card.color_name)
         self.update()
 
     def load_clothes_from_memory(self):
         cards = Row()
-        for item in Clothes().list:
-            card = Card(self.card_delete, item['id'], item['color'])
+        for item in self.clothes.list:
+            card = Card(self.delete_card, self.edit_card, item['id'], item['color'])
             cards.controls.append(card)
         return cards
