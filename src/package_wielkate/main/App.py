@@ -1,9 +1,9 @@
 from flet import *
-from Card import Task
+from Card import Card
 from Clothes import Clothes
 
 
-class TodoApp(Column):
+class App(Column):
     # application's root control is a Column containing all other controls
     def __init__(self):
         super().__init__()
@@ -11,7 +11,7 @@ class TodoApp(Column):
         self.scroll = ScrollMode.HIDDEN
         self.expand = True
         self.alignment = MainAxisAlignment.START
-        self.tasks = self.load_tasks()
+        self.cards = self.load_clothes_from_memory()
         self.spacing = 15
         self.controls = [
             Row(
@@ -21,36 +21,35 @@ class TodoApp(Column):
                     IconButton(
                         Icons.ADD_CIRCLE_ROUNDED,
                         icon_size=30,
-                        icon_color=Colors.WHITE,
                         on_click=self.add_clicked
                     )
                 ]
             ),
-            Divider(height=8, color=Colors.WHITE30),
+            Divider(),
             Row(
                 alignment =MainAxisAlignment.SPACE_AROUND,
                 scroll=ScrollMode.HIDDEN,
                 controls=[
-                    self.tasks,
+                    self.cards,
                 ],
             ),
         ]
 
     def add_clicked(self, e):
-        task = Task("", self.task_delete)
-        self.tasks.controls.append(task)
+        card = Card(self.card_delete, "", "")
+        self.cards.controls.append(card)
         self.update()
 
-    def task_delete(self, task):
-        self.tasks.controls.remove(task)
+    def card_delete(self, card):
+        self.cards.controls.remove(card)
         self.update()
 
-    def tabs_changed(self, e):
+    def card_edit(self, e):
         self.update()
 
-    def load_tasks(self):
-        tasks = Row()
+    def load_clothes_from_memory(self):
+        cards = Row()
         for item in Clothes().list:
-            task = Task("", self.task_delete, item['id'], item['color'])
-            tasks.controls.append(task)
-        return tasks
+            card = Card(self.card_delete, item['id'], item['color'])
+            cards.controls.append(card)
+        return cards

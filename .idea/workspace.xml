@@ -4,36 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ClothesMatching.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/Color.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/assets/fonts/Comfortaa.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+    <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/just.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/TodoApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wielkate&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wielkate/ClothesMatching.git&quot;,
+    &quot;accountId&quot;: &quot;be0b9d41-f036-4af7-992e-8be86b8b1bca&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -45,7 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.__main__.executor": "Run",
     "Python.backend.executor": "Run",
+    "Python.just.executor": "Run",
+    "Python.new_main.executor": "Run",
     "Python.process_images.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -61,7 +71,73 @@
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.process_images">
+  <component name="RunManager" selected="Python.__main__">
+    <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/package_wielkate/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="just" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/package_wielkate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/just.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="new_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/package_wielkate/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/new_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="prepare_combinations" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
@@ -108,6 +184,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.just" />
+        <item itemvalue="Python.new_main" />
         <item itemvalue="Python.process_images" />
         <item itemvalue="Python.prepare_combinations" />
       </list>
@@ -129,6 +208,30 @@
       <option name="presentableId" value="Default" />
       <updated>1742410625832</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add basic UI">
+      <option name="closed" value="true" />
+      <created>1744840023730</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744840023731</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add basic UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add basic UI" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/package_wielkate/main/App.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

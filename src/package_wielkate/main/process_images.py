@@ -1,4 +1,3 @@
-import csv
 import os
 from io import BytesIO
 
@@ -8,17 +7,16 @@ from rembg import remove
 from skimage.color import rgb2lab, deltaE_ciede2000
 
 from Clothes import Clothes
-from Color import Color
+from commons import global_colors
 
 images_directory = 'images/'
-colors = []
 clothes = Clothes()
 
 
 def closest_color_name(rgb):
     rgb1 = [x / 255 for x in rgb]
     min_colors = {}
-    for color in colors:
+    for color in global_colors:
         diff = deltaE_ciede2000(rgb2lab(rgb1), color.lab)
         min_colors[diff] = color.name
     return min_colors[min(min_colors.keys())]
@@ -53,12 +51,5 @@ def process_images():
         process_image(filename)
 
 
-def load_colors():
-    global colors
-    file = open(file='Colors.csv', mode='r', encoding='utf-8')
-    colors = [Color(row) for row in csv.reader(file, delimiter=',')]
-
-
 # main
-load_colors()
 process_images()
