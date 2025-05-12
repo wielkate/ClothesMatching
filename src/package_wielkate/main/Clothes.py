@@ -10,7 +10,10 @@ class Clothes:
     def __load_clothes__(self):
         if os.path.exists(self.filename):
             with open(self.filename, 'r') as f:
-                return json.load(f)
+                try:
+                    return json.load(f)
+                except json.JSONDecodeError:
+                    return []
         return []
 
     def __save__(self):

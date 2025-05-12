@@ -1,6 +1,7 @@
 import csv
 
 from Color import Color
+from Clothes import Clothes
 
 
 def load_colors():
@@ -9,3 +10,5 @@ def load_colors():
 
 
 global_colors = load_colors()
+global_clothes = Clothes()
+IMAGES_DIRECTORY = 'images/'

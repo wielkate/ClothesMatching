@@ -1,4 +1,3 @@
-import os
 from io import BytesIO
 
 from PIL import Image  # can be cv2 or bytes
@@ -6,11 +5,7 @@ from colorthief import ColorThief
 from rembg import remove
 from skimage.color import rgb2lab, deltaE_ciede2000
 
-from Clothes import Clothes
-from commons import global_colors
-
-images_directory = 'images/'
-clothes = Clothes()
+from commons import global_colors, IMAGES_DIRECTORY
 
 
 def closest_color_name(rgb):
@@ -40,16 +35,7 @@ def remove_bg(filename):
     return remove(image)
 
 
-def process_image(image):
-    image_without_bg = remove_bg(images_directory + image)
-    color_name = get_dominant_color_name(image_without_bg)
-    clothes.add(image, color_name)
-
-
-def process_images():
-    for filename in os.listdir(images_directory):
-        process_image(filename)
-
-
-# main
-process_images()
+def process_image_with_name(image):
+    print(f'Processing image with name {image}')
+    image_without_bg = remove_bg(IMAGES_DIRECTORY + image)
+    return get_dominant_color_name(image_without_bg)

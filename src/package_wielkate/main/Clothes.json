@@ -4,340 +4,68 @@
         "color": "Maroon"
     },
     {
-        "id": "10.png",
+        "id": "2.png",
+        "color": "Brown"
+    },
+    {
+        "id": "3.png",
+        "color": "Firebrick"
+    },
+    {
+        "id": "4.png",
+        "color": "Brown"
+    },
+    {
+        "id": "5.png",
+        "color": "Sienna"
+    },
+    {
+        "id": "6.png",
+        "color": "Misty Rose"
+    },
+    {
+        "id": "7.png",
+        "color": "Indian Red"
+    },
+    {
+        "id": "8.png",
+        "color": "Indian Red"
+    },
+    {
+        "id": "9.png",
         "color": "Dark Salmon"
     },
     {
-        "id": "100.png",
-        "color": "Midnight Blue"
-    },
-    {
-        "id": "101.png",
-        "color": "Black"
-    },
-    {
-        "id": "102.png",
-        "color": "Tan"
-    },
-    {
-        "id": "103.png",
-        "color": "Tan"
-    },
-    {
-        "id": "104.png",
-        "color": "Tan"
-    },
-    {
-        "id": "105.png",
-        "color": "Tan"
-    },
-    {
-        "id": "106.png",
-        "color": "Tan"
-    },
-    {
-        "id": "107.png",
-        "color": "Dark Goldenrod"
-    },
-    {
-        "id": "108.png",
-        "color": "Peru"
-    },
-    {
-        "id": "109.png",
-        "color": "Goldenrod"
+        "id": "10.png",
+        "color": "Dark Salmon"
     },
     {
         "id": "11.png",
         "color": "Dark Salmon"
     },
     {
-        "id": "110.png",
-        "color": "Tan"
-    },
-    {
-        "id": "111.png",
-        "color": "Brown"
-    },
-    {
-        "id": "112.png",
-        "color": "Saddle Brown"
-    },
-    {
-        "id": "113.png",
-        "color": "Sienna"
-    },
-    {
-        "id": "114.png",
-        "color": "Peru"
-    },
-    {
-        "id": "115.png",
-        "color": "Sienna"
-    },
-    {
-        "id": "116.png",
-        "color": "Gainsboro"
-    },
-    {
-        "id": "117.png",
-        "color": "Gainsboro"
-    },
-    {
-        "id": "118.png",
-        "color": "Light Gray"
-    },
-    {
-        "id": "119.png",
-        "color": "Wheat"
-    },
-    {
         "id": "12.png",
         "color": "Rosy Brown"
-    },
-    {
-        "id": "120.png",
-        "color": "Silver"
-    },
-    {
-        "id": "121.png",
-        "color": "Tan"
-    },
-    {
-        "id": "122.png",
-        "color": "Tan"
-    },
-    {
-        "id": "123.png",
-        "color": "Antique White"
-    },
-    {
-        "id": "124.png",
-        "color": "Light Gray"
-    },
-    {
-        "id": "125.png",
-        "color": "Misty Rose"
-    },
-    {
-        "id": "126.png",
-        "color": "Light Coral"
-    },
-    {
-        "id": "127.png",
-        "color": "Silver"
-    },
-    {
-        "id": "128.png",
-        "color": "Dark Gray"
-    },
-    {
-        "id": "129.png",
-        "color": "Dark Gray"
     },
     {
         "id": "13.png",
         "color": "Rosy Brown"
     },
     {
-        "id": "130.png",
-        "color": "Dim Gray"
-    },
-    {
-        "id": "131.png",
-        "color": "Dim Gray"
-    },
-    {
-        "id": "132.png",
-        "color": "Dark Gray"
-    },
-    {
-        "id": "133.png",
-        "color": "Gray"
-    },
-    {
-        "id": "134.png",
-        "color": "Dark Gray"
-    },
-    {
-        "id": "135.png",
-        "color": "Gray"
-    },
-    {
-        "id": "136.png",
-        "color": "Black"
-    },
-    {
-        "id": "137.png",
-        "color": "Dim Gray"
-    },
-    {
-        "id": "138.png",
-        "color": "Gray"
-    },
-    {
-        "id": "139.png",
-        "color": "Slate Gray"
-    },
-    {
         "id": "14.png",
         "color": "Misty Rose"
-    },
-    {
-        "id": "140.png",
-        "color": "Dim Gray"
-    },
-    {
-        "id": "141.png",
-        "color": "Light Gray"
-    },
-    {
-        "id": "142.png",
-        "color": "Gray"
-    },
-    {
-        "id": "143.png",
-        "color": "Brown"
-    },
-    {
-        "id": "144.png",
-        "color": "Chocolate"
-    },
-    {
-        "id": "145.png",
-        "color": "Chocolate"
-    },
-    {
-        "id": "146.png",
-        "color": "Tan"
-    },
-    {
-        "id": "147.png",
-        "color": "Goldenrod"
-    },
-    {
-        "id": "148.png",
-        "color": "Dark Seagreen"
-    },
-    {
-        "id": "149.png",
-        "color": "Dark Olive Green"
     },
     {
         "id": "15.png",
         "color": "Deep Pink"
     },
     {
-        "id": "150.png",
-        "color": "Steel Blue"
-    },
-    {
-        "id": "151.png",
-        "color": "Rosy Brown"
-    },
-    {
-        "id": "152.png",
-        "color": "Rosy Brown"
-    },
-    {
-        "id": "153.png",
-        "color": "Pale Violet Red"
-    },
-    {
-        "id": "154.png",
-        "color": "Gray"
-    },
-    {
-        "id": "155.png",
-        "color": "Light Gray"
-    },
-    {
-        "id": "156.png",
-        "color": "Black"
-    },
-    {
-        "id": "157.png",
-        "color": "Saddle Brown"
-    },
-    {
-        "id": "158.png",
-        "color": "Brown"
-    },
-    {
-        "id": "159.png",
-        "color": "Brown"
-    },
-    {
         "id": "16.png",
         "color": "Medium Violet Red"
     },
     {
-        "id": "160.png",
-        "color": "Saddle Brown"
-    },
-    {
-        "id": "161.png",
-        "color": "Dark Khaki"
-    },
-    {
-        "id": "162.png",
-        "color": "Dark Olive Green"
-    },
-    {
-        "id": "163.png",
-        "color": "Yellow Green"
-    },
-    {
-        "id": "164.png",
-        "color": "Light Slate Gray"
-    },
-    {
-        "id": "165.png",
-        "color": "Light Steel Blue"
-    },
-    {
-        "id": "166.png",
-        "color": "Rosy Brown"
-    },
-    {
-        "id": "167.png",
-        "color": "Rosy Brown"
-    },
-    {
-        "id": "168.png",
-        "color": "Medium Violet Red"
-    },
-    {
-        "id": "169.png",
-        "color": "Light Gray"
-    },
-    {
         "id": "17.png",
         "color": "Tomato"
-    },
-    {
-        "id": "170.png",
-        "color": "Gray"
-    },
-    {
-        "id": "171.png",
-        "color": "Black"
-    },
-    {
-        "id": "172.png",
-        "color": "Sienna"
-    },
-    {
-        "id": "173.png",
-        "color": "Brown"
-    },
-    {
-        "id": "174.png",
-        "color": "Chocolate"
-    },
-    {
-        "id": "175.png",
-        "color": "Goldenrod"
     },
     {
         "id": "18.png",
@@ -346,10 +74,6 @@
     {
         "id": "19.png",
         "color": "Orange Red"
-    },
-    {
-        "id": "2.png",
-        "color": "Brown"
     },
     {
         "id": "20.png",
@@ -392,10 +116,6 @@
         "color": "Burly Wood"
     },
     {
-        "id": "3.png",
-        "color": "Firebrick"
-    },
-    {
         "id": "30.png",
         "color": "Olive"
     },
@@ -434,10 +154,6 @@
     {
         "id": "39.png",
         "color": "Rosy Brown"
-    },
-    {
-        "id": "4.png",
-        "color": "Brown"
     },
     {
         "id": "40.png",
@@ -480,10 +196,6 @@
         "color": "Dark Slate Blue"
     },
     {
-        "id": "5.png",
-        "color": "Sienna"
-    },
-    {
         "id": "50.png",
         "color": "Purple"
     },
@@ -522,10 +234,6 @@
     {
         "id": "59.png",
         "color": "Dark Khaki"
-    },
-    {
-        "id": "6.png",
-        "color": "Misty Rose"
     },
     {
         "id": "60.png",
@@ -568,10 +276,6 @@
         "color": "Sea Green"
     },
     {
-        "id": "7.png",
-        "color": "Indian Red"
-    },
-    {
         "id": "70.png",
         "color": "Dark Olive Green"
     },
@@ -610,10 +314,6 @@
     {
         "id": "79.png",
         "color": "Medium Aquamarine"
-    },
-    {
-        "id": "8.png",
-        "color": "Indian Red"
     },
     {
         "id": "80.png",
@@ -656,10 +356,6 @@
         "color": "Sky Blue"
     },
     {
-        "id": "9.png",
-        "color": "Dark Salmon"
-    },
-    {
         "id": "90.png",
         "color": "Cadet Blue"
     },
@@ -698,5 +394,309 @@
     {
         "id": "99.png",
         "color": "Dark Slate Blue"
+    },
+    {
+        "id": "100.png",
+        "color": "Midnight Blue"
+    },
+    {
+        "id": "101.png",
+        "color": "Black"
+    },
+    {
+        "id": "102.png",
+        "color": "Tan"
+    },
+    {
+        "id": "103.png",
+        "color": "Tan"
+    },
+    {
+        "id": "104.png",
+        "color": "Tan"
+    },
+    {
+        "id": "105.png",
+        "color": "Tan"
+    },
+    {
+        "id": "106.png",
+        "color": "Tan"
+    },
+    {
+        "id": "107.png",
+        "color": "Dark Goldenrod"
+    },
+    {
+        "id": "108.png",
+        "color": "Peru"
+    },
+    {
+        "id": "109.png",
+        "color": "Goldenrod"
+    },
+    {
+        "id": "110.png",
+        "color": "Tan"
+    },
+    {
+        "id": "111.png",
+        "color": "Brown"
+    },
+    {
+        "id": "112.png",
+        "color": "Saddle Brown"
+    },
+    {
+        "id": "113.png",
+        "color": "Sienna"
+    },
+    {
+        "id": "114.png",
+        "color": "Peru"
+    },
+    {
+        "id": "115.png",
+        "color": "Sienna"
+    },
+    {
+        "id": "116.png",
+        "color": "Gainsboro"
+    },
+    {
+        "id": "117.png",
+        "color": "Gainsboro"
+    },
+    {
+        "id": "118.png",
+        "color": "Light Gray"
+    },
+    {
+        "id": "119.png",
+        "color": "Wheat"
+    },
+    {
+        "id": "120.png",
+        "color": "Silver"
+    },
+    {
+        "id": "121.png",
+        "color": "Tan"
+    },
+    {
+        "id": "122.png",
+        "color": "Tan"
+    },
+    {
+        "id": "123.png",
+        "color": "Antique White"
+    },
+    {
+        "id": "124.png",
+        "color": "Light Gray"
+    },
+    {
+        "id": "125.png",
+        "color": "Misty Rose"
+    },
+    {
+        "id": "126.png",
+        "color": "Light Coral"
+    },
+    {
+        "id": "127.png",
+        "color": "Silver"
+    },
+    {
+        "id": "128.png",
+        "color": "Dark Gray"
+    },
+    {
+        "id": "129.png",
+        "color": "Dark Gray"
+    },
+    {
+        "id": "130.png",
+        "color": "Dim Gray"
+    },
+    {
+        "id": "131.png",
+        "color": "Dim Gray"
+    },
+    {
+        "id": "132.png",
+        "color": "Dark Gray"
+    },
+    {
+        "id": "133.png",
+        "color": "Gray"
+    },
+    {
+        "id": "134.png",
+        "color": "Dark Gray"
+    },
+    {
+        "id": "135.png",
+        "color": "Gray"
+    },
+    {
+        "id": "136.png",
+        "color": "Black"
+    },
+    {
+        "id": "137.png",
+        "color": "Dim Gray"
+    },
+    {
+        "id": "138.png",
+        "color": "Gray"
+    },
+    {
+        "id": "139.png",
+        "color": "Slate Gray"
+    },
+    {
+        "id": "140.png",
+        "color": "Dim Gray"
+    },
+    {
+        "id": "141.png",
+        "color": "Light Gray"
+    },
+    {
+        "id": "142.png",
+        "color": "Gray"
+    },
+    {
+        "id": "143.png",
+        "color": "Brown"
+    },
+    {
+        "id": "144.png",
+        "color": "Chocolate"
+    },
+    {
+        "id": "145.png",
+        "color": "Chocolate"
+    },
+    {
+        "id": "146.png",
+        "color": "Tan"
+    },
+    {
+        "id": "147.png",
+        "color": "Goldenrod"
+    },
+    {
+        "id": "148.png",
+        "color": "Dark Seagreen"
+    },
+    {
+        "id": "149.png",
+        "color": "Dark Olive Green"
+    },
+    {
+        "id": "150.png",
+        "color": "Steel Blue"
+    },
+    {
+        "id": "151.png",
+        "color": "Rosy Brown"
+    },
+    {
+        "id": "152.png",
+        "color": "Rosy Brown"
+    },
+    {
+        "id": "153.png",
+        "color": "Pale Violet Red"
+    },
+    {
+        "id": "154.png",
+        "color": "Gray"
+    },
+    {
+        "id": "155.png",
+        "color": "Light Gray"
+    },
+    {
+        "id": "156.png",
+        "color": "Black"
+    },
+    {
+        "id": "157.png",
+        "color": "Saddle Brown"
+    },
+    {
+        "id": "158.png",
+        "color": "Brown"
+    },
+    {
+        "id": "159.png",
+        "color": "Brown"
+    },
+    {
+        "id": "160.png",
+        "color": "Saddle Brown"
+    },
+    {
+        "id": "161.png",
+        "color": "Dark Khaki"
+    },
+    {
+        "id": "162.png",
+        "color": "Dark Olive Green"
+    },
+    {
+        "id": "163.png",
+        "color": "Yellow Green"
+    },
+    {
+        "id": "164.png",
+        "color": "Light Slate Gray"
+    },
+    {
+        "id": "165.png",
+        "color": "Light Steel Blue"
+    },
+    {
+        "id": "166.png",
+        "color": "Rosy Brown"
+    },
+    {
+        "id": "167.png",
+        "color": "Rosy Brown"
+    },
+    {
+        "id": "168.png",
+        "color": "Medium Violet Red"
+    },
+    {
+        "id": "169.png",
+        "color": "Light Gray"
+    },
+    {
+        "id": "170.png",
+        "color": "Gray"
+    },
+    {
+        "id": "171.png",
+        "color": "Black"
+    },
+    {
+        "id": "172.png",
+        "color": "Sienna"
+    },
+    {
+        "id": "173.png",
+        "color": "Brown"
+    },
+    {
+        "id": "174.png",
+        "color": "Chocolate"
+    },
+    {
+        "id": "175.png",
+        "color": "Goldenrod"
     }
 ]

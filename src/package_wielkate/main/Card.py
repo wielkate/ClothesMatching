@@ -1,7 +1,22 @@
-from flet import *
+from flet.core import alignment, padding
+from flet.core.border import BorderSide, Border
+from flet.core.colors import Colors
+from flet.core.column import Column
+from flet.core.container import Container
+from flet.core.gradients import LinearGradient
+from flet.core.icon_button import IconButton
+from flet.core.icons import Icons
+from flet.core.image import Image
+from flet.core.list_tile import ListTile
+from flet.core.row import Row
+from flet.core.search_bar import SearchBar
+from flet.core.stack import Stack
+from flet.core.text import Text
+from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxisAlignment, FontWeight, TextAlign
 
-from commons import global_colors
+from commons import global_colors, IMAGES_DIRECTORY
 from Mode import Mode
+
 
 class Card(Column):
     def __init__(self, delete_card_action, edit_card_action, filename, color_name):
@@ -41,7 +56,7 @@ class Card(Column):
                     # Background image
                     Container(
                         content=Image(
-                            src="images/" + self.filename,
+                            src=IMAGES_DIRECTORY + self.filename,
                             fit=ImageFit.COVER,
                             width=324,
                             height=576
