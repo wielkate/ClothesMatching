@@ -29,8 +29,7 @@ def are_monochromatic(rgb1, rgb2, hue_threshold=10, sat_threshold=50):
 
 
 def return_monochrome_colors(for_color):
-    monochrome_colors = [color.name for color in global_colors if
-                         are_monochromatic(color.rgb, for_color.rgb) and color.name != for_color.name]
+    monochrome_colors = [color.name for color in global_colors if are_monochromatic(color.rgb, for_color.rgb)]
     return ', '.join(monochrome_colors)
 
 

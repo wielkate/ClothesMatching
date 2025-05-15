@@ -5,7 +5,8 @@ from colorthief import ColorThief
 from rembg import remove
 from skimage.color import rgb2lab, deltaE_ciede2000
 
-from commons import global_colors, IMAGES_DIRECTORY
+from commons import global_colors
+from constants import IMAGES_DIRECTORY
 
 
 def closest_color_name(rgb):

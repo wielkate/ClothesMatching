@@ -1,0 +1,25 @@
+from flet.core.row import Row
+from flet.core.types import MainAxisAlignment, ScrollMode
+
+from DisplayCard import DisplayCard
+from to_import import global_clothes
+
+class DisplayCards(Row):
+    def __init__(self, delete_card_action, edit_card_action):
+        super().__init__(
+            alignment=MainAxisAlignment.SPACE_AROUND,
+            scroll=ScrollMode.HIDDEN,
+        )
+        self.delete_card_action = delete_card_action
+        self.edit_card_action = edit_card_action
+        self.controls = self._load_clothes_from_memory()
+
+    def _load_clothes_from_memory(self):
+        return [DisplayCard(self.delete_card_action, self.edit_card_action, item.filename, item.color_name)
+                for item in global_clothes.controls][::-1]
+
+    def add_card(self, filename, color_name):
+        self.controls.insert(0, DisplayCard(self.delete_card_action, self.edit_card_action, filename, color_name))
+
+    def delete_card(self, card):
+        self.controls.remove(card)

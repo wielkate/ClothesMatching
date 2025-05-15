@@ -7,69 +7,59 @@ from flet.core.row import Row
 from flet.core.text import Text
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
-from commons import global_clothes
-from Card import Card
+from DisplayCards import DisplayCards
 from FileUploader import FileUploader
+from to_import import global_clothes
 
 
 class App(Column):
     # application's root control is a Column containing all other controls
     def __init__(self):
-        super().__init__()
-
-        self.scroll = ScrollMode.HIDDEN
-        self.expand = True
-        self.alignment = MainAxisAlignment.START
-        self.cards = self.load_clothes_from_memory()
-        self.spacing = 15
+        super().__init__(
+            scroll=ScrollMode.HIDDEN,
+            expand=True,
+            alignment=MainAxisAlignment.START,
+            spacing=15
+        )
+        self.file_uploader = FileUploader(self._add_new_item)
+        self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action)
         self.controls = [
-            Row(
-                alignment=MainAxisAlignment.SPACE_BETWEEN,
-                controls=[
-                    Text("Choose item or add new", size=18, weight=FontWeight.NORMAL, color=Colors.WHITE),
-                    IconButton(
-                        Icons.ADD_CIRCLE_ROUNDED,
-                        tooltip="Add file",
-                        icon_size=30,
-                        on_click=self.add_clicked
-                    )
-                ]
-            ),
+            self._create_header(),
             Divider(),
-            Row(
-                alignment=MainAxisAlignment.SPACE_AROUND,
-                scroll=ScrollMode.HIDDEN,
-                controls=[
-                    self.cards,
-                ],
-            ),
+            self.display_cards,
         ]
-        self.file_uploader = FileUploader(self.handle_file_processed)
 
-    def add_clicked(self, e):
+    def _create_header(self):
+        return Row(
+            alignment=MainAxisAlignment.SPACE_BETWEEN,
+            controls=[
+                Text("Choose item or add new", size=18, weight=FontWeight.NORMAL, color=Colors.WHITE),
+                IconButton(
+                    Icons.ADD_CIRCLE_ROUNDED,
+                    tooltip="Add file",
+                    icon_size=30,
+                    on_click=self._add_clicked
+                )
+            ]
+        )
+
+    def _add_clicked(self, e):
         self.file_uploader.upload_files()
 
-    def delete_card(self, card):
-        global_clothes.delete(card.filename)
-        self.cards.controls.remove(card)
+    def _add_new_item(self, filename, color_name):
+        global_clothes.add(filename, color_name)
+        self.display_cards.add_card(filename, color_name)
         self.update()
 
-    def edit_card(self, card):
+    def _delete_card_action(self, card):
+        global_clothes.delete(card.filename)
+        self.file_uploader.delete_file(card.filename)
+        self.display_cards.delete_card(card)
+        self.update()
+
+    def _edit_card_action(self, card):
         global_clothes.edit(card.filename, card.color_name)
         self.update()
 
-    def load_clothes_from_memory(self):
-        cards = Row()
-        for item in global_clothes.list:
-            card = Card(self.delete_card, self.edit_card, item['id'], item['color'])
-            cards.controls.insert(0, card)
-        return cards
-
     def did_mount(self):
         self.file_uploader.attach_to_page(self.page)
-
-    def handle_file_processed(self, filename, color_name):
-        global_clothes.add(filename, color_name)
-        card = Card(self.delete_card, self.edit_card, filename, color_name)
-        self.cards.controls.insert(0, card)
-        self.update()

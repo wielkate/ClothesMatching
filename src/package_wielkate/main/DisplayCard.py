@@ -14,28 +14,54 @@ from flet.core.stack import Stack
 from flet.core.text import Text
 from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxisAlignment, FontWeight, TextAlign
 
-from commons import global_colors, IMAGES_DIRECTORY
 from Mode import Mode
+from commons import global_colors
+from constants import IMAGES_DIRECTORY
 
 
-class Card(Column):
+def _create_search_bar(items, on_select, on_back):
+    return SearchBar(
+        visible=False,
+        view_leading=IconButton(
+            icon=Icons.ARROW_BACK_ROUNDED,
+            tooltip="Back",
+            on_click=on_back
+        ),
+        controls=[
+            ListTile(
+                title=Text(
+                    value=item,
+                    text_align=TextAlign.CENTER
+                ),
+                data=item,
+                on_click=on_select)
+            for item in items
+        ]
+    )
+
+
+class DisplayCard(Column):
     def __init__(self, delete_card_action, edit_card_action, filename, color_name):
         super().__init__()
-        self.mode = None
         self.filename = filename
         self.color_name = color_name
-
-        self.color_options = self.create_color_options()
-        self.mode_options = self.create_mode_options()
-
         self.delete_card_action = delete_card_action
         self.edit_card_action = edit_card_action
 
-        self.display_card = self.create_display_card()
-
+        self.color_options = _create_search_bar(
+            items=[color.name for color in global_colors],
+            on_select=self._select_color,
+            on_back=self._close_color_options
+        )
+        self.mode_options = _create_search_bar(
+            items=[mode.value for mode in Mode],
+            on_select=self._select_mode,
+            on_back=self._close_mode_options
+        )
+        self.display_card = self._create_display_card()
         self.controls = [self.display_card, self.color_options, self.mode_options]
 
-    def create_display_card(self):
+    def _create_display_card(self):
         return Container(
             width=324,
             height=636,
@@ -94,19 +120,19 @@ class Card(Column):
                                     alignment=MainAxisAlignment.SPACE_AROUND,
                                     controls=[
                                         IconButton(
-                                            icon=Icons.CREATE_OUTLINED,
+                                            icon=Icons.CREATE_ROUNDED,
                                             tooltip="Edit color name",
-                                            on_click=self.edit_clicked,
+                                            on_click=self._edit_clicked,
                                         ),
                                         IconButton(
-                                            icon=Icons.DONE_OUTLINED,
+                                            icon=Icons.DONE_ROUNDED,
                                             tooltip="Choose",
-                                            on_click=self.choose_clicked,
+                                            on_click=self._choose_clicked,
                                         ),
                                         IconButton(
-                                            icon=Icons.DELETE_OUTLINE,
+                                            icon=Icons.DELETE_OUTLINE_ROUNDED,
                                             tooltip="Delete",
-                                            on_click=self.delete_clicked,
+                                            on_click=self._delete_clicked,
                                         ),
                                     ],
                                 ),
@@ -117,57 +143,17 @@ class Card(Column):
             ),
         )
 
-    def create_color_options(self):
-        return SearchBar(
-            visible=False,
-            view_leading=IconButton(
-                icon=Icons.ARROW_BACK,
-                tooltip="Back",
-                on_click=self.colors_back_clicked
-            ),
-            controls=[
-                ListTile(title=Text(
-                    value=color.name,
-                    text_align=TextAlign.CENTER,
-                ),
-                    on_click=self.select_color,
-                    data=color.name,
-                )
-                for color in global_colors
-            ],
-        )
-
-    def create_mode_options(self):
-        return SearchBar(
-            visible=False,
-            view_leading=IconButton(
-                icon=Icons.ARROW_BACK,
-                tooltip="Back",
-                on_click=self.modes_back_clicked
-            ),
-            controls=[
-                ListTile(title=Text(
-                    value=mode.value,
-                    text_align=TextAlign.CENTER,
-                ),
-                    on_click=self.select_mode,
-                    data=mode.value,
-                )
-                for mode in Mode
-            ],
-        )
-
-    def edit_clicked(self, e):
+    def _edit_clicked(self, e):
         self.color_options.visible = True
         self.color_options.open_view()
         self.update()
 
-    def choose_clicked(self, e):
+    def _choose_clicked(self, e):
         self.mode_options.visible = True
         self.mode_options.open_view()
         self.update()
 
-    def select_color(self, e):
+    def _select_color(self, e):
         selected_color = e.control.data
         self.display_card.content.controls[2].content.controls[0].value = selected_color
         self.color_name = selected_color
@@ -176,22 +162,20 @@ class Card(Column):
         self.edit_card_action(self)
         self.update()
 
-    def select_mode(self, e):
-        selected_mode = e.control.data
-        self.mode = selected_mode
-        self.mode_options.close_view(selected_mode)
+    def _select_mode(self, e):
+        self.mode_options.close_view(e.control.data)
         self.mode_options.visible = False
         self.update()
 
-    def colors_back_clicked(self, e):
+    def _close_color_options(self, e):
         self.color_options.close_view()
         self.color_options.visible = False
         self.update()
 
-    def modes_back_clicked(self, e):
+    def _close_mode_options(self, e):
         self.mode_options.close_view()
         self.mode_options.visible = False
         self.update()
 
-    def delete_clicked(self, e):
+    def _delete_clicked(self, e):
         self.delete_card_action(self)
