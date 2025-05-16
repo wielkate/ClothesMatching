@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/to_import.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/CardsRow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/PrimaryCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/SecondaryCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,14 +229,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/package_wielkate/main/App.py</url>
-          <line>55</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/.venv/Lib/site-packages/flet/core/control.py</url>
+          <line>332</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

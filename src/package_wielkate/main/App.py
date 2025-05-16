@@ -1,3 +1,4 @@
+from flet.core.animation import AnimationCurve
 from flet.core.colors import Colors
 from flet.core.column import Column
 from flet.core.divider import Divider
@@ -9,7 +10,7 @@ from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
 from DisplayCards import DisplayCards
 from FileUploader import FileUploader
-from to_import import global_clothes
+from global_clothes import global_clothes
 
 
 class App(Column):
@@ -22,11 +23,12 @@ class App(Column):
             spacing=15
         )
         self.file_uploader = FileUploader(self._add_new_item)
-        self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action)
+        self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action, self._return_clothes_action)
         self.controls = [
             self._create_header(),
             Divider(),
             self.display_cards,
+            global_clothes
         ]
 
     def _create_header(self):
@@ -63,3 +65,8 @@ class App(Column):
 
     def did_mount(self):
         self.file_uploader.attach_to_page(self.page)
+
+    def _return_clothes_action(self, items):
+        global_clothes.controls = items
+        self.scroll_to(offset=800, duration=2000, curve=AnimationCurve.EASE_IN_OUT)
+        self.update()

@@ -12,11 +12,13 @@ from flet.core.row import Row
 from flet.core.search_bar import SearchBar
 from flet.core.stack import Stack
 from flet.core.text import Text
-from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxisAlignment, FontWeight, TextAlign
+from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxisAlignment, FontWeight, TextAlign, \
+    ScrollMode
 
 from Mode import Mode
 from commons import global_colors
 from constants import IMAGES_DIRECTORY
+from global_clothes import global_clothes
 
 
 def _create_search_bar(items, on_select, on_back):
@@ -41,22 +43,25 @@ def _create_search_bar(items, on_select, on_back):
 
 
 class DisplayCard(Column):
-    def __init__(self, delete_card_action, edit_card_action, filename, color_name):
-        super().__init__()
+    def __init__(self, delete_card_action, edit_card_action, return_clothes_action, filename, color_name):
+        super().__init__(
+            scroll=ScrollMode.HIDDEN
+        )
         self.filename = filename
         self.color_name = color_name
         self.delete_card_action = delete_card_action
         self.edit_card_action = edit_card_action
+        self.return_clothes_action = return_clothes_action
 
         self.color_options = _create_search_bar(
             items=[color.name for color in global_colors],
             on_select=self._select_color,
-            on_back=self._close_color_options
+            on_back=lambda e: self._close_search_bar(self.color_options)
         )
         self.mode_options = _create_search_bar(
             items=[mode.value for mode in Mode],
             on_select=self._select_mode,
-            on_back=self._close_mode_options
+            on_back=lambda e: self._close_search_bar(self.mode_options)
         )
         self.display_card = self._create_display_card()
         self.controls = [self.display_card, self.color_options, self.mode_options]
@@ -122,12 +127,12 @@ class DisplayCard(Column):
                                         IconButton(
                                             icon=Icons.CREATE_ROUNDED,
                                             tooltip="Edit color name",
-                                            on_click=self._edit_clicked,
+                                            on_click=lambda e: self._open_search_bar(self.color_options),
                                         ),
                                         IconButton(
                                             icon=Icons.DONE_ROUNDED,
                                             tooltip="Choose",
-                                            on_click=self._choose_clicked,
+                                            on_click=lambda e: self._open_search_bar(self.mode_options)
                                         ),
                                         IconButton(
                                             icon=Icons.DELETE_OUTLINE_ROUNDED,
@@ -143,15 +148,21 @@ class DisplayCard(Column):
             ),
         )
 
-    def _edit_clicked(self, e):
-        self.color_options.visible = True
-        self.color_options.open_view()
+    def _open_search_bar(self, search_bar):
+        search_bar.visible = True
+        search_bar.open_view()
         self.update()
 
-    def _choose_clicked(self, e):
-        self.mode_options.visible = True
-        self.mode_options.open_view()
+    def _close_search_bar(self, search_bar):
+        search_bar.close_view()
+        search_bar.visible = False
         self.update()
+
+    def _get_matched_items(self, mode):
+        items = []
+        if mode == Mode.MONOCHROME.value:
+            items = global_clothes.return_monochrome_for(self.filename, self.color_name)
+        return items
 
     def _select_color(self, e):
         selected_color = e.control.data
@@ -163,18 +174,10 @@ class DisplayCard(Column):
         self.update()
 
     def _select_mode(self, e):
-        self.mode_options.close_view(e.control.data)
+        mode = e.control.data
+        self.mode_options.close_view(mode)
         self.mode_options.visible = False
-        self.update()
-
-    def _close_color_options(self, e):
-        self.color_options.close_view()
-        self.color_options.visible = False
-        self.update()
-
-    def _close_mode_options(self, e):
-        self.mode_options.close_view()
-        self.mode_options.visible = False
+        self.return_clothes_action(self._get_matched_items(mode))
         self.update()
 
     def _delete_clicked(self, e):
