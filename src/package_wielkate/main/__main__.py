@@ -1,5 +1,4 @@
-from flet import Page, Container, Theme, Colors, CrossAxisAlignment, ClipBehavior, app
-from flet.core import padding, border
+from flet import Page, Theme, Colors, CrossAxisAlignment, app
 from flet.core.border import BorderSide
 from flet.core.box import BoxConstraints
 from flet.core.buttons import RoundedRectangleBorder
@@ -7,7 +6,7 @@ from flet.core.text_style import TextStyle
 from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme
 from flet.core.types import FontWeight
 
-from App import App
+from MobileApp import MobileApp
 
 
 def setup(page):
@@ -54,22 +53,9 @@ def setup(page):
     page.bgcolor = Colors.BLUE_GREY_900
 
 
-def create_mobile_container():
-    return Container(
-        width=360,
-        height=800,
-        bgcolor=Colors.BLACK,
-        border_radius=40,
-        border=border.all(0.5, Colors.WHITE),
-        padding=padding.only(top=35, left=18, right=18, bottom=35),
-        clip_behavior=ClipBehavior.HARD_EDGE,
-        content=App()
-    )
-
-
 def main(page: Page):
     setup(page)
-    page.add(create_mobile_container())
+    page.add(MobileApp(page))
     page.update()
 
 

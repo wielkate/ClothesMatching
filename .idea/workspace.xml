@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/MobileApp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,28 +46,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "Python.backend.executor": "Run",
-    "Python.commons.executor": "Debug",
-    "Python.files.executor": "Run",
-    "Python.just.executor": "Run",
-    "Python.new_main.executor": "Run",
-    "Python.prepare_combinations.executor": "Run",
-    "Python.process_images.executor": "Run",
-    "Python.xd.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.just.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_combinations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_images.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_animation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main" />
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\assets" />
     </key>
   </component>
@@ -96,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="commons" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="__xd (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +111,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/commons.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/__xd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +120,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="__xd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\__xd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__xd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,7 +155,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/files.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\__xd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,7 +186,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="xd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="start_animation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,7 +199,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/xd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/package_wielkate/main/start_animation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,10 +211,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.__main__" />
-        <item itemvalue="Python.xd" />
-        <item itemvalue="Python.prepare_combinations" />
-        <item itemvalue="Python.commons" />
-        <item itemvalue="Python.files" />
+        <item itemvalue="Python.__xd (1)" />
+        <item itemvalue="Python.__xd" />
+        <item itemvalue="Python.start_animation" />
+        <item itemvalue="Python.__xd" />
       </list>
     </recent_temporary>
   </component>

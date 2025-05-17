@@ -4,6 +4,7 @@ from flet.core.column import Column
 from flet.core.divider import Divider
 from flet.core.icon_button import IconButton
 from flet.core.icons import Icons
+from flet.core.page import Page
 from flet.core.row import Row
 from flet.core.text import Text
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
@@ -15,13 +16,16 @@ from global_clothes import global_clothes
 
 class App(Column):
     # application's root control is a Column containing all other controls
-    def __init__(self):
+    def __init__(self, page: Page):
         super().__init__(
             scroll=ScrollMode.HIDDEN,
             expand=True,
             alignment=MainAxisAlignment.START,
-            spacing=15
+            spacing=15,
+            opacity=0,
+            animate_opacity=1000
         )
+        self.page = page
         self.file_uploader = FileUploader(self._add_new_item)
         self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action, self._return_clothes_action)
         self.controls = [
@@ -30,6 +34,7 @@ class App(Column):
             self.display_cards,
             global_clothes
         ]
+        self.file_uploader.attach_to_page(self.page)
 
     def _create_header(self):
         return Row(
@@ -62,9 +67,6 @@ class App(Column):
     def _edit_card_action(self, card):
         global_clothes.edit(card.filename, card.color_name)
         self.update()
-
-    def did_mount(self):
-        self.file_uploader.attach_to_page(self.page)
 
     def _return_clothes_action(self, items):
         global_clothes.controls = items
