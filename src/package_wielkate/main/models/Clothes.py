@@ -12,7 +12,6 @@ class Clothes:
     def __init__(self):
         self.database_name = DATABASE_NAME
         self.__init_database__()
-        self.list = self.__load_clothes__()
         
     def __connect__(self):
         return sqlite3.connect(self.database_name)
@@ -23,7 +22,7 @@ class Clothes:
             connection.commit()
         print(f'Connect to database {self.database_name}')
 
-    def __load_clothes__(self) -> list[tuple[str, str]]:
+    def load_clothes(self) -> list[tuple[str, str]]:
         with self.__connect__() as connection:
             cursor = connection.cursor()
             cursor.execute(SQL_GET_ALL_CLOTHES_ITEMS)

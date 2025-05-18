@@ -1,10 +1,10 @@
 from flet.core.column import Column
 from flet.core.types import ScrollMode
 
-from Clothes import Clothes
-from MatchCard import MatchCard
-from src.package_wielkate.main.Mode import Mode
+from src.package_wielkate.main.models.Clothes import Clothes
+from src.package_wielkate.main.models.Mode import Mode
 from src.package_wielkate.main.commons.global_combinations import global_combinations
+from src.package_wielkate.main.ui.MatchCard import MatchCard
 
 
 class MatchCards(Column):
@@ -16,7 +16,7 @@ class MatchCards(Column):
         self.list = self._load_clothes_from_memory()
 
     def _load_clothes_from_memory(self):
-        return [MatchCard(item[0], item[1]) for item in self.clothes.list]
+        return [MatchCard(item[0], item[1]) for item in self.clothes.load_clothes()]
 
     def _get_related_colors(self, mode, filename, color_name):
         combinations_for_color = [combination for combination in global_combinations

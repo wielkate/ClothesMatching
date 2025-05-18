@@ -12,10 +12,15 @@ from flet.core.row import Row
 from flet.core.search_bar import SearchBar
 from flet.core.stack import Stack
 from flet.core.text import Text
-from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxisAlignment, FontWeight, TextAlign, \
-    ScrollMode
+from flet.core.types import (ClipBehavior,
+                             ImageFit,
+                             MainAxisAlignment,
+                             CrossAxisAlignment,
+                             FontWeight,
+                             TextAlign,
+                             ScrollMode)
 
-from Mode import Mode
+from src.package_wielkate.main.models.Mode import Mode
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
 from src.package_wielkate.main.commons.global_clothes import global_clothes
 from src.package_wielkate.main.commons.global_colors import global_colors

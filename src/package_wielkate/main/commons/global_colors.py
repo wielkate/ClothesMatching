@@ -1,6 +1,6 @@
 import sqlite3
 
-from src.package_wielkate.main.Color import Color
+from src.package_wielkate.main.models.Color import Color
 from src.package_wielkate.main.commons.constants import DATABASE_NAME, SQL_GET_ALL_COLORS
 
 

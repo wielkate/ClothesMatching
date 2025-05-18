@@ -3,11 +3,16 @@ from flet.core.border import BorderSide
 from flet.core.box import BoxConstraints
 from flet.core.buttons import RoundedRectangleBorder
 from flet.core.text_style import TextStyle
-from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme, SearchBarTheme, \
-    TextButtonTheme
+from flet.core.theme import (IconButtonTheme,
+                             DividerTheme,
+                             ListTileTheme,
+                             SearchViewTheme,
+                             SearchBarTheme,
+                             TextButtonTheme
+                             )
 from flet.core.types import FontWeight
 
-from MobileApp import MobileApp
+from src.package_wielkate.main.MobileApp import MobileApp
 
 
 def setup(page):

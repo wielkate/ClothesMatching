@@ -1,3 +1,3 @@
-from src.package_wielkate.main.MatchCards import MatchCards
+from src.package_wielkate.main.ui.MatchCards import MatchCards
 
 global_clothes = MatchCards()

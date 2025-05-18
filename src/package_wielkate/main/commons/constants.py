@@ -1,6 +1,10 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE_NAME = os.path.abspath(os.path.join(BASE_DIR, '..', 'database', 'database.db'))
+
 IMAGES_DIRECTORY = 'images/'
-COLORS_CSV = 'Colors.csv'
-DATABASE_NAME = 'database/database.db'
+COLORS_CSV = '../resources/Colors.csv'
 
 SQL_CREATE_COLORS_TABLE = """
             CREATE TABLE IF NOT EXISTS colors (

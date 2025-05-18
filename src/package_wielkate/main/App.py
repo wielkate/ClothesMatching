@@ -11,8 +11,8 @@ from flet.core.text import Text
 from flet.core.text_button import TextButton
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
-from DisplayCards import DisplayCards
-from FileUploader import FileUploader
+from src.package_wielkate.main.ui.DisplayCards import DisplayCards
+from src.package_wielkate.main.utility.FileUploader import FileUploader
 from src.package_wielkate.main.commons.global_clothes import global_clothes
 
 

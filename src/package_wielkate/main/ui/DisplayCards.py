@@ -1,8 +1,8 @@
 from flet.core.row import Row
 from flet.core.types import MainAxisAlignment, ScrollMode
 
-from DisplayCard import DisplayCard
 from src.package_wielkate.main.commons.global_clothes import global_clothes
+from src.package_wielkate.main.ui.DisplayCard import DisplayCard
 
 
 class DisplayCards(Row):

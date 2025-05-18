@@ -5,7 +5,7 @@ from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerF
 from flet.core.page import Page
 
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
-from process_images import process_image_with_name
+from src.package_wielkate.main.scripts.process_images import process_image_with_name
 
 
 class FileUploader:
