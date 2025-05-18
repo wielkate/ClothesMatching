@@ -3,7 +3,8 @@ from flet.core.border import BorderSide
 from flet.core.box import BoxConstraints
 from flet.core.buttons import RoundedRectangleBorder
 from flet.core.text_style import TextStyle
-from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme, SearchBarTheme
+from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme, SearchBarTheme, \
+    TextButtonTheme
 from flet.core.types import FontWeight
 
 from MobileApp import MobileApp
@@ -16,6 +17,11 @@ def setup(page):
                        icon_button_theme=IconButtonTheme(foreground_color=Colors.WHITE,
                                                          icon_size=30,
                                                          hover_color=Colors.GREY_800
+                                                         ),
+                       text_button_theme=TextButtonTheme(foreground_color=Colors.BLACK,
+                                                         text_style=TextStyle(
+                                                             weight=FontWeight.W_900,
+                                                             font_family=font)
                                                          ),
                        divider_theme=DividerTheme(color=Colors.WHITE30,
                                                   thickness=1),

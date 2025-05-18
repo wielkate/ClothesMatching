@@ -131,12 +131,12 @@ class DisplayCard(Column):
                                         ),
                                         IconButton(
                                             icon=Icons.DONE_ROUNDED,
-                                            tooltip="Choose",
+                                            tooltip="Choose item",
                                             on_click=lambda e: self._open_search_bar(self.mode_options)
                                         ),
                                         IconButton(
                                             icon=Icons.DELETE_OUTLINE_ROUNDED,
-                                            tooltip="Delete",
+                                            tooltip="Delete item",
                                             on_click=self._delete_clicked,
                                         ),
                                     ],

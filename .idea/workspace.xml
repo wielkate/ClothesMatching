@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_colors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Clothes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Color.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Color.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Combination.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Combination.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/Combinations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/Combinations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/DisplayCards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/FileUploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/FileUploader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/MatchCards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/global_clothes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_clothes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/prepare_combinations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/process_images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,27 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "Python.__xd (1).executor": "Run",
-    "Python.backend.executor": "Run",
-    "Python.commons.executor": "Debug",
-    "Python.files.executor": "Run",
-    "Python.just.executor": "Run",
-    "Python.new_main.executor": "Run",
-    "Python.prepare_combinations.executor": "Run",
-    "Python.process_images.executor": "Run",
-    "Python.start_animation.executor": "Run",
-    "Python.xd (1).executor": "Run",
-    "Python.xd.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "ToolWindow.ExcelReader.ShowToolbar": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.just.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_combinations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_images.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_animation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;ToolWindow.ExcelReader.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main" />

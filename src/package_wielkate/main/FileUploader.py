@@ -9,10 +9,10 @@ from process_images import process_image_with_name
 
 
 class FileUploader:
-    def __init__(self, add_new_item, upload_dir: str = IMAGES_DIRECTORY):
+    def __init__(self, add_new_item_action, upload_dir: str = IMAGES_DIRECTORY):
         self.upload_dir = upload_dir
         self.file_picker = FilePicker(on_result=self.file_picker_result)
-        self.add_new_item = add_new_item
+        self.add_new_item_action = add_new_item_action
 
     def file_picker_result(self, e: FilePickerResultEvent):
         if e.files is not None:
@@ -22,7 +22,7 @@ class FileUploader:
                 dest_path = os.path.join(self.upload_dir, filename)
                 shutil.copy(file.path, dest_path)
                 color_name = process_image_with_name(filename)
-                self.add_new_item(filename, color_name)
+                self.add_new_item_action(filename, color_name)
 
     def upload_files(self):
         return self.file_picker.pick_files(allow_multiple=True, file_type=FilePickerFileType.IMAGE)

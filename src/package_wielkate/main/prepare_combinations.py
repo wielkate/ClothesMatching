@@ -15,7 +15,7 @@ def are_monochromatic(hsv1, hsv2, hue_threshold=10, saturation_threshold=10):
     Check if two colors are monochromatic by comparing their HSV values.
 
     Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values in degrees or percentage
+    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
     - hue_threshold: Maximum allowed hue difference in degrees
     - saturation_threshold: Maximum allowed saturation difference in percentage
     - value_threshold: Maximum allowed brightness (value) difference in percentage
@@ -40,13 +40,13 @@ def monochrome_for(for_color):
     return ', '.join(monochrome_colors)
 
 
-def are_analogous(hsv1, hsv2, hue_min_threshold=10, hue_max_threshold=30, saturation_threshold=10,
+def are_analogous(hsv1, hsv2, hue_min_threshold=10, hue_max_threshold=40, saturation_threshold=10,
                   value_threshold=10):
     """
     Check if two colors are analogous by comparing their HSV values.
 
     Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values in degrees or percentage
+    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
     - min_hue_threshold: Minimum allowed hue difference in degrees (to be different from monochrome)
     - max_hue_threshold: Maximum allowed hue difference in degrees
     - saturation_threshold: Maximum allowed saturation difference in percentage
@@ -75,12 +75,12 @@ def analogous_for(for_color):
     return ', '.join(analogous_colors)
 
 
-def are_complementary(hsv1, hsv2, hue_threshold=10, saturation_threshold=10, value_threshold=10):
+def are_complementary(hsv1, hsv2, hue_threshold=20, saturation_threshold=20, value_threshold=20):
     """
     Check if two colors are complementary by comparing their HSV values.
 
     Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values in degrees or percentage
+    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
     - hue_threshold: Allowed deviation from 180° hue difference
     - saturation_threshold: Allowed saturation difference (in %)
     - value_threshold: Allowed brightness (value) difference (in %)
