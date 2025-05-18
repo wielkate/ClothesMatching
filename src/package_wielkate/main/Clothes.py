@@ -1,38 +1,56 @@
-import json
-import os
+import sqlite3
 
-from src.package_wielkate.main.commons.constants import CLOTHES_JSON
-
+from src.package_wielkate.main.commons.constants import (DATABASE_NAME,
+                                                         SQL_CREATE_CLOTHES_TABLE,
+                                                         SQL_GET_ALL_CLOTHES_ITEMS,
+                                                         SQL_INSERT_INTO_CLOTHES_TABLE,
+                                                         SQL_UPDATE_CLOTHES_TABLE,
+                                                         SQL_DELETE_FROM_CLOTHES_TABLE
+                                                         )
 
 class Clothes:
     def __init__(self):
-        self.filename = CLOTHES_JSON
+        self.database_name = DATABASE_NAME
+        self.__init_database__()
         self.list = self.__load_clothes__()
+        
+    def __connect__(self):
+        return sqlite3.connect(self.database_name)
+    
+    def __init_database__(self) -> None:
+        with self.__connect__() as connection:
+            connection.execute(SQL_CREATE_CLOTHES_TABLE)
+            connection.commit()
+        print(f'Connect to database {self.database_name}')
 
-    def __load_clothes__(self):
-        if os.path.exists(self.filename):
-            with open(self.filename, 'r') as f:
-                try:
-                    return json.load(f)
-                except json.JSONDecodeError:
-                    return []
-        return []
+    def __load_clothes__(self) -> list[tuple[str, str]]:
+        with self.__connect__() as connection:
+            cursor = connection.cursor()
+            cursor.execute(SQL_GET_ALL_CLOTHES_ITEMS)
+            records = cursor.fetchall()
+        print(f'Load {len(records)} clothes items from database')
+        return records
 
-    def __save__(self):
-        with open(self.filename, 'w', encoding='utf-8') as file:
-            json.dump(self.list, file, ensure_ascii=False, indent=4)
+    def add(self, filename: str, dominant_color: str) -> None:
+        with self.__connect__() as connection:
+            connection.execute(SQL_INSERT_INTO_CLOTHES_TABLE,
+                               (filename, dominant_color)
+                               )
+            connection.commit()
+        print(f'Add new file {filename} with color {dominant_color} to database')
 
-    def add(self, id, dominant_color) -> None:
-        new_item = {'id': id, 'color': dominant_color}
-        self.list.append(new_item)
-        self.__save__()
+    def edit(self, filename: str, new_color_name: str) -> None:
+        with self.__connect__() as connection:
+            connection.execute(SQL_UPDATE_CLOTHES_TABLE,
+                               (new_color_name, filename)
+                               )
+            connection.commit()
+        print(f'Edit file\'s {filename} color to {new_color_name} in database')
 
-    def edit(self, id: str, new_color_name: str) -> None:
-        item = next((item for item in self.list if item['id'] == id), None)
-        if item:
-            item['color'] = new_color_name
-            self.__save__()
-
-    def delete(self, id: str) -> None:
-        self.list = [item for item in self.list if item['id'] != id]
-        self.__save__()
+    def delete(self, filename: str) -> None:
+        with self.__connect__() as connection:
+            connection.execute(SQL_DELETE_FROM_CLOTHES_TABLE,
+                               (filename,)
+                               )
+            connection.commit()
+        print(f'Delete file {filename} from database')

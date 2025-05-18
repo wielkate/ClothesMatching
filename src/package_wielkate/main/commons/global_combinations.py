@@ -1,12 +1,17 @@
-import csv
+import sqlite3
 
 from src.package_wielkate.main.Combination import Combination
-from src.package_wielkate.main.commons.constants import COMBINATIONS_CSV
+from src.package_wielkate.main.commons.constants import DATABASE_NAME, SQL_GET_ALL_COMBINATIONS
 
 
-def load_combinations():
-    file = open(file=COMBINATIONS_CSV, mode='r', encoding='utf-8')
-    return [Combination(row) for row in csv.reader(file, delimiter=',')]
+def __load_combinations__():
+    with sqlite3.connect(DATABASE_NAME) as connection:
+        cursor = connection.cursor()
+        cursor.execute(SQL_GET_ALL_COMBINATIONS)
+        combinations = cursor.fetchall()
+
+    print(f'Load {len(combinations)} combinations from database')
+    return [Combination(combination) for combination in combinations]
 
 
-global_combinations = load_combinations()
+global_combinations = __load_combinations__()

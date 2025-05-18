@@ -16,7 +16,7 @@ class MatchCards(Column):
         self.list = self._load_clothes_from_memory()
 
     def _load_clothes_from_memory(self):
-        return [MatchCard(item['id'], item['color']) for item in self.clothes.list]
+        return [MatchCard(item[0], item[1]) for item in self.clothes.list]
 
     def _get_related_colors(self, mode, filename, color_name):
         combinations_for_color = [combination for combination in global_combinations
@@ -31,6 +31,12 @@ class MatchCards(Column):
 
     def edit(self, filename, color_name):
         self.clothes.edit(filename, color_name)
+        self.list = [
+            MatchCard(card.filename, color_name)
+            if card.filename == filename
+            else MatchCard(card.filename, card.color_name)
+            for card in self.list
+        ]
 
     def delete(self, filename):
         self.clothes.delete(filename)

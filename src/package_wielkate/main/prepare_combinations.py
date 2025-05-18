@@ -1,13 +1,18 @@
-import csv
+import sqlite3
 
-from src.package_wielkate.main.commons.constants import COMBINATIONS_CSV
+from src.package_wielkate.main.commons.constants import (DATABASE_NAME,
+                                                         SQL_INSERT_INTO_COMBINATIONS_TABLE,
+                                                         SQL_CREATE_COMBINATIONS_TABLE
+                                                         )
 from src.package_wielkate.main.commons.global_colors import global_colors
 
 
-def save_to_csv(filename, data):
-    with open(filename, mode='w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerows(data)
+def __save_to_database__(data: list):
+    with sqlite3.connect(DATABASE_NAME) as connection:
+        connection.execute(SQL_CREATE_COMBINATIONS_TABLE)
+        connection.executemany(SQL_INSERT_INTO_COMBINATIONS_TABLE, data)
+        connection.commit()
+    print(f"Save {len(data)} combinations to database")
 
 
 def are_monochromatic(hsv1, hsv2, hue_threshold=10, saturation_threshold=10):
@@ -113,4 +118,4 @@ combinations = [
     [color.name, monochrome_for(color), analogous_for(color), complementary_for(color)]
     for color in global_colors
 ]
-save_to_csv(COMBINATIONS_CSV, combinations)
+__save_to_database__(combinations)
