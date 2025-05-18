@@ -11,7 +11,7 @@ from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
 from DisplayCards import DisplayCards
 from FileUploader import FileUploader
-from global_clothes import global_clothes
+from src.package_wielkate.main.commons.global_clothes import global_clothes
 
 
 class App(Column):

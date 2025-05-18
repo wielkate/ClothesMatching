@@ -4,7 +4,7 @@ import shutil
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
 from flet.core.page import Page
 
-from constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
 from process_images import process_image_with_name
 
 

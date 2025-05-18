@@ -3,7 +3,7 @@ from flet.core.border import BorderSide
 from flet.core.box import BoxConstraints
 from flet.core.buttons import RoundedRectangleBorder
 from flet.core.text_style import TextStyle
-from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme
+from flet.core.theme import IconButtonTheme, DividerTheme, ListTileTheme, SearchViewTheme, SearchBarTheme
 from flet.core.types import FontWeight
 
 from MobileApp import MobileApp
@@ -25,6 +25,9 @@ def setup(page):
                            weight=FontWeight.W_900,
                            font_family=font,
                        )
+                       ),
+                       search_bar_theme=SearchBarTheme(
+                           bgcolor=Colors.TRANSPARENT,
                        ),
                        search_view_theme=SearchViewTheme(
                            bgcolor=Colors.BLACK,

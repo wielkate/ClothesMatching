@@ -1,1 +1,0 @@
-IMAGES_DIRECTORY = 'images/'

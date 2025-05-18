@@ -16,9 +16,9 @@ from flet.core.types import ClipBehavior, ImageFit, MainAxisAlignment, CrossAxis
     ScrollMode
 
 from Mode import Mode
-from commons import global_colors
-from constants import IMAGES_DIRECTORY
-from global_clothes import global_clothes
+from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.commons.global_clothes import global_clothes
+from src.package_wielkate.main.commons.global_colors import global_colors
 
 
 def _create_search_bar(items, on_select, on_back):
@@ -158,11 +158,16 @@ class DisplayCard(Column):
         search_bar.visible = False
         self.update()
 
-    def _get_matched_items(self, mode):
-        items = []
-        if mode == Mode.MONOCHROME.value:
-            items = global_clothes.return_monochrome_for(self.filename, self.color_name)
-        return items
+    def _get_matched_items_by(self, mode):
+        match mode:
+            case Mode.MONOCHROME.value:
+                return global_clothes.get_monochrome_for(self.filename, self.color_name)
+            case Mode.ANALOGOUS.value:
+                return global_clothes.get_analogous_colors_for(self.filename, self.color_name)
+            case Mode.COMPLEMENTARY.value:
+                return global_clothes.get_complementary_colors_for(self.filename, self.color_name)
+            case _:
+                return []
 
     def _select_color(self, e):
         selected_color = e.control.data
@@ -177,7 +182,7 @@ class DisplayCard(Column):
         mode = e.control.data
         self.mode_options.close_view(mode)
         self.mode_options.visible = False
-        self.return_clothes_action(self._get_matched_items(mode))
+        self.return_clothes_action(self._get_matched_items_by(mode))
         self.update()
 
     def _delete_clicked(self, e):

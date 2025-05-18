@@ -5,8 +5,8 @@ from colorthief import ColorThief
 from rembg import remove
 from skimage.color import rgb2lab, deltaE_ciede2000
 
-from commons import global_colors
-from constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.commons.global_colors import global_colors
+from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
 
 
 def closest_color_name(rgb):

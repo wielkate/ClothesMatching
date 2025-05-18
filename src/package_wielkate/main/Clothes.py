@@ -1,10 +1,12 @@
 import json
 import os
 
+from src.package_wielkate.main.commons.constants import CLOTHES_JSON
+
 
 class Clothes:
     def __init__(self):
-        self.filename = 'Clothes.json'
+        self.filename = CLOTHES_JSON
         self.list = self.__load_clothes__()
 
     def __load_clothes__(self):

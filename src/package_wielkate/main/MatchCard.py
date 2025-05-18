@@ -4,7 +4,7 @@ from flet.core.colors import Colors
 from flet.core.container import Container
 from flet.core.types import ClipBehavior, ImageFit
 
-from constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
 
 
 class MatchCard(Container):
