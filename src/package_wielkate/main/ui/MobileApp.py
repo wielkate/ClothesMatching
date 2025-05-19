@@ -7,7 +7,7 @@ from flet.core.animation import AnimationCurve, Animation
 from flet.core.page import Page
 from flet.core.stack import Stack
 
-from App import App
+from src.package_wielkate.main.ui.App import App
 
 WELCOME_LETTER_MAP = [
     # W

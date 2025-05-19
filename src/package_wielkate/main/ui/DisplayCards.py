@@ -1,3 +1,4 @@
+from flet.core.animation import AnimationCurve
 from flet.core.row import Row
 from flet.core.types import MainAxisAlignment, ScrollMode
 
@@ -33,6 +34,7 @@ class DisplayCards(Row):
                                             color_name
                                             )
                              )
+        self.scroll_to(offset=0, duration=2000, curve=AnimationCurve.EASE_IN_OUT)
 
     def delete_card(self, card):
         self.controls.remove(card)

@@ -1,9 +1,9 @@
 from flet.core.column import Column
 from flet.core.types import ScrollMode
 
+from src.package_wielkate.main.commons.global_combinations import global_combinations
 from src.package_wielkate.main.models.Clothes import Clothes
 from src.package_wielkate.main.models.Mode import Mode
-from src.package_wielkate.main.commons.global_combinations import global_combinations
 from src.package_wielkate.main.ui.MatchCard import MatchCard
 
 

@@ -12,7 +12,7 @@ from flet.core.theme import (IconButtonTheme,
                              )
 from flet.core.types import FontWeight
 
-from src.package_wielkate.main.MobileApp import MobileApp
+from src.package_wielkate.main.ui.MobileApp import MobileApp
 
 
 def setup(page):

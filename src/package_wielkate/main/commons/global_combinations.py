@@ -6,6 +6,7 @@ from src.package_wielkate.main.models.Combination import Combination
 
 logger = logging.getLogger(__name__)
 
+
 def __load_combinations__():
     with sqlite3.connect(DATABASE_NAME) as connection:
         cursor = connection.cursor()

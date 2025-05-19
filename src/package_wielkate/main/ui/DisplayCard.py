@@ -20,10 +20,10 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from src.package_wielkate.main.models.Mode import Mode
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
 from src.package_wielkate.main.commons.global_clothes import global_clothes
 from src.package_wielkate.main.commons.global_colors import global_colors
+from src.package_wielkate.main.models.Mode import Mode
 
 
 def _create_search_bar(items, on_select, on_back):

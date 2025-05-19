@@ -8,7 +8,7 @@ dependencies = [
     "rembg"
 ]
 authors = [
-  { name="Ekaterina Mashchenko"},
+    { name = "Ekaterina Mashchenko" },
 ]
 description = "A small color-picking application"
 readme = "README.md"

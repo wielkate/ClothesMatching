@@ -14,5 +14,4 @@ class Color:
 
     def __get_hsv_in_degrees_and_percentage__(self):
         h, s, v = rgb_to_hsv(self.r, self.g, self.b)
-        h, s, v = h * 360, s * 100, v * 100
-        return h, s, v
+        return h * 360, s * 100, v * 100
