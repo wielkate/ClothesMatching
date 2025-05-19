@@ -1,7 +1,10 @@
+import logging
 import sqlite3
 
-from src.package_wielkate.main.models.Color import Color
 from src.package_wielkate.main.commons.constants import DATABASE_NAME, SQL_GET_ALL_COLORS
+from src.package_wielkate.main.models.Color import Color
+
+logger = logging.getLogger(__name__)
 
 
 def __load_colors__():
@@ -10,7 +13,7 @@ def __load_colors__():
         cursor.execute(SQL_GET_ALL_COLORS)
         colors = cursor.fetchall()
 
-    print(f'Load {len(colors)} colors from database')
+    logger.info(f'Load {len(colors)} colors from database')
     return [Color(color) for color in colors]
 
 

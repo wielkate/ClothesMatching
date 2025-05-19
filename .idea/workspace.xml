@@ -5,118 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
-      <change afterPath="$PROJECT_DIR$/start_app_from_scratch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/104.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/107.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/109.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/111.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/112.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/116.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/117.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/118.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/119.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/121.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/124.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/125.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/126.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/127.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/129.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/132.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/133.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/134.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/137.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/138.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/139.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/141.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/142.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/143.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/146.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/147.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/148.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/149.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/151.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/153.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/154.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/155.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/157.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/158.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/159.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/161.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/162.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/163.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/164.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/165.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/166.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/167.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/168.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/169.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/170.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/171.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/172.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/173.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/174.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/175.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/77.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/79.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/81.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/82.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/86.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/87.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/88.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/89.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/93.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/94.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/95.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/images/99.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/utility/FileUploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/FileUploader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/utility/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_colors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/models/Clothes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/models/Clothes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/prepare_colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/prepare_colors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/prepare_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/prepare_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_app_from_scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_app_from_scratch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,36 +51,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "Python.__xd (1).executor": "Run",
-    "Python.backend.executor": "Run",
-    "Python.commons.executor": "Debug",
-    "Python.files.executor": "Run",
-    "Python.global_colors.executor": "Run",
-    "Python.just.executor": "Run",
-    "Python.new_main.executor": "Run",
-    "Python.prepare_colors (1).executor": "Run",
-    "Python.prepare_colors.executor": "Run",
-    "Python.prepare_combinations (1).executor": "Run",
-    "Python.prepare_combinations.executor": "Run",
-    "Python.process_images.executor": "Run",
-    "Python.script (1).executor": "Run",
-    "Python.script.executor": "Run",
-    "Python.start_animation.executor": "Run",
-    "Python.start_app_from_scratch (1).executor": "Run",
-    "Python.start_app_from_scratch.executor": "Run",
-    "Python.xd (1).executor": "Run",
-    "Python.xd.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "ToolWindow.ExcelReader.ShowToolbar": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.global_colors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.just.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_colors (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_colors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_combinations (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_combinations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_images.executor&quot;: &quot;Run&quot;,
+    &quot;Python.script (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.script.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_animation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_app_from_scratch (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_app_from_scratch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.xd.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;ToolWindow.ExcelReader.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/PycharmProjects/ClothesMatching/src/package_wielkate/main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main" />
@@ -196,7 +93,7 @@
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.start_app_from_scratch (1)">
+  <component name="RunManager" selected="Python.__main__">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
@@ -375,8 +272,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.start_app_from_scratch (1)" />
         <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.start_app_from_scratch (1)" />
         <item itemvalue="Python.start_app_from_scratch" />
         <item itemvalue="Python.prepare_combinations (1)" />
         <item itemvalue="Python.prepare_colors (1)" />

@@ -1,4 +1,5 @@
 import csv
+import logging
 import sqlite3
 
 from src.package_wielkate.main.commons.constants import (DATABASE_NAME,
@@ -6,6 +7,8 @@ from src.package_wielkate.main.commons.constants import (DATABASE_NAME,
                                                          SQL_CREATE_COLORS_TABLE,
                                                          SQL_INSERT_INTO_COLORS_TABLE
                                                          )
+
+logger = logging.getLogger(__name__)
 
 
 def __get_colors_from_csv__():
@@ -21,7 +24,7 @@ def __save_to_database__(data: list):
         connection.execute(SQL_CREATE_COLORS_TABLE)
         connection.executemany(SQL_INSERT_INTO_COLORS_TABLE, data)
         connection.commit()
-    print(f"Save {len(data)} colors to database")
+    logger.info(f"Save {len(data)} colors to database")
 
 
 # main

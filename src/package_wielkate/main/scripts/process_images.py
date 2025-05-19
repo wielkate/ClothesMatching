@@ -1,3 +1,4 @@
+import logging
 from io import BytesIO
 
 from PIL import Image  # can be cv2 or bytes
@@ -5,8 +6,10 @@ from colorthief import ColorThief
 from rembg import remove
 from skimage.color import rgb2lab, deltaE_ciede2000
 
-from src.package_wielkate.main.commons.global_colors import global_colors
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.commons.global_colors import global_colors
+
+logger = logging.getLogger(__name__)
 
 
 def closest_color_name(rgb):
@@ -37,6 +40,6 @@ def remove_bg(filename):
 
 
 def process_image_with_name(image):
-    print(f'Processing image with name {image}')
+    logger.info(f'Processing image with name {image}')
     image_without_bg = remove_bg(IMAGES_DIRECTORY + image)
     return get_dominant_color_name(image_without_bg)

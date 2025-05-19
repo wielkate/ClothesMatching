@@ -1,7 +1,8 @@
+import logging
 import os
 import shutil
-import sys
 import subprocess
+import sys
 
 from src.package_wielkate.main.commons.constants import DATABASE_NAME, IMAGES_DIRECTORY
 
@@ -10,16 +11,25 @@ program2 = 'src/package_wielkate/main/scripts/prepare_combinations.py'
 program3 = 'src/package_wielkate/main/__main__.py'
 python = sys.executable
 
+logging.basicConfig(
+    level=logging.INFO,
+    datefmt='%Y-%m-%d %H:%M:%S',
+    format="%(asctime)s  %(name)s  [%(levelname)s]: %(message)s"
+)
+logger = logging.getLogger(__name__)
+
+
 def run_programs():
     os.remove(DATABASE_NAME)
-    print('Remove database')
+    logger.info('Remove database')
     shutil.rmtree(IMAGES_DIRECTORY)
-    print('Remove image directory')
+    logger.info('Remove image directory')
     subprocess.run([python, program1])
-    print('Prepare colors table')
+    logger.info('Prepare colors table')
     subprocess.run([python, program2])
-    print('Prepare combinations table')
+    logger.info('Prepare combinations table')
     subprocess.run([python, program3])
-    print('Start application from the scratch')
+    logger.info('Start application from the scratch')
+
 
 run_programs()
