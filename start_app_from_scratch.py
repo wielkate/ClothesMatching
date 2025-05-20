@@ -4,11 +4,11 @@ import shutil
 import subprocess
 import sys
 
-from src.package_wielkate.main.commons.constants import DATABASE_NAME, IMAGES_DIRECTORY
+from constants import DATABASE_NAME, IMAGES_DIRECTORY
 
-program1 = 'src/package_wielkate/main/scripts/prepare_colors.py'
-program2 = 'src/package_wielkate/main/scripts/prepare_combinations.py'
-program3 = 'src/package_wielkate/main/__main__.py'
+program1 = 'prepare_colors.py'
+program2 = 'prepare_combinations.py'
+program3 = 'main.py'
 python = sys.executable
 
 logging.basicConfig(
