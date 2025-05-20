@@ -5,19 +5,186 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/101.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/102.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/103.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/104.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/107.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/109.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/113.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/115.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/117.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/119.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/121.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/122.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/123.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/124.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/125.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/126.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/127.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/129.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/133.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/134.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/137.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/138.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/139.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/141.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/142.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/143.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/146.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/147.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/148.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/149.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/151.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/153.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/154.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/155.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/156.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/157.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/158.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/159.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/160.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/161.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/162.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/163.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/164.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/165.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/166.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/167.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/168.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/169.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/170.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/171.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/172.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/173.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/174.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/175.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/58.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/61.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/62.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/63.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/65.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/66.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/67.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/69.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/73.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/74.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/75.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/77.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/78.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/79.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/81.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/82.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/83.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/84.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/85.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/86.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/87.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/88.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/89.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/90.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/91.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/92.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/93.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/94.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/95.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/97.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/98.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/images2/99.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MobileApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/MobileApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/database/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/models/Color.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/models/Color.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/models/Combination.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/models/Combination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/FileUploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/FileUploader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/MatchCards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_image.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +264,7 @@
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__main__">
+  <component name="RunManager" selected="Python.start_app_from_scratch (1)">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
@@ -276,8 +443,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.start_app_from_scratch (1)" />
+        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.start_app_from_scratch" />
         <item itemvalue="Python.prepare_combinations (1)" />
         <item itemvalue="Python.prepare_colors (1)" />

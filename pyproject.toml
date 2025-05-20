@@ -3,9 +3,7 @@ name = "ClothesMatching"
 version = "0.0.1"
 dependencies = [
     "flet",
-    "pillow",
-    "onnxruntime",
-    "rembg"
+    "pillow"
 ]
 authors = [
     { name = "Ekaterina Mashchenko" },
