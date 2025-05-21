@@ -3,7 +3,9 @@ name = "ClothesMatching"
 version = "0.0.1"
 dependencies = [
     "flet",
-    "pillow"
+    "pillow",
+    "numpy",
+    "opencv-python"
 ]
 authors = [
     { name = "Ekaterina Mashchenko" },
