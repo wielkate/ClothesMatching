@@ -1,7 +1,4 @@
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
-DATABASE_NAME = 'database.db'
+DATABASE_NAME = 'database/database.db'
 IMAGES_DIRECTORY = 'images/'
 COLORS_CSV = 'resources/Colors.csv'
 

@@ -2,8 +2,8 @@ from flet.core.animation import AnimationCurve
 from flet.core.row import Row
 from flet.core.types import MainAxisAlignment, ScrollMode
 
-from global_clothes import global_clothes
-from DisplayCard import DisplayCard
+from commons.global_clothes import global_clothes
+from ui.DisplayCard import DisplayCard
 
 
 class DisplayCards(Row):

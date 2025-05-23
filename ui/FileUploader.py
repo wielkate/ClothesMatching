@@ -4,8 +4,8 @@ import shutil
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
 from flet.core.page import Page
 
-from constants import IMAGES_DIRECTORY
-from process_image import process_image_with_name
+from commons.constants import IMAGES_DIRECTORY
+from service.process_image import process_image_with_name
 
 
 class FileUploader:

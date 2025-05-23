@@ -1,10 +1,10 @@
 from flet.core.column import Column
 from flet.core.types import ScrollMode
 
-from global_combinations import global_combinations
-from Clothes import Clothes
-from Mode import Mode
-from MatchCard import MatchCard
+from commons.global_combinations import global_combinations
+from models.Clothes import Clothes
+from models.Mode import Mode
+from ui.MatchCard import MatchCard
 
 
 class MatchCards(Column):

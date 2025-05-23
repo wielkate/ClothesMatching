@@ -11,9 +11,9 @@ from flet.core.text import Text
 from flet.core.text_button import TextButton
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
-from global_clothes import global_clothes
-from DisplayCards import DisplayCards
-from FileUploader import FileUploader
+from commons.global_clothes import global_clothes
+from ui.DisplayCards import DisplayCards
+from ui.FileUploader import FileUploader
 
 
 class App(Column):

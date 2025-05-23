@@ -1,8 +1,8 @@
 import logging
 import sqlite3
 
-from constants import DATABASE_NAME, SQL_GET_ALL_COMBINATIONS
-from Combination import Combination
+from commons.constants import DATABASE_NAME, SQL_GET_ALL_COMBINATIONS
+from models.Combination import Combination
 
 logger = logging.getLogger(__name__)
 

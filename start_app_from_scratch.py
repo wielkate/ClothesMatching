@@ -4,10 +4,10 @@ import shutil
 import subprocess
 import sys
 
-from constants import DATABASE_NAME, IMAGES_DIRECTORY
+from commons.constants import DATABASE_NAME, IMAGES_DIRECTORY
 
-program1 = 'prepare_colors.py'
-program2 = 'prepare_combinations.py'
+program1 = 'service/prepare_colors.py'
+program2 = 'service/prepare_combinations.py'
 program3 = 'main.py'
 python = sys.executable
 
@@ -20,16 +20,23 @@ logger = logging.getLogger(__name__)
 
 
 def run_programs():
-    os.remove(DATABASE_NAME)
-    logger.info('Remove database')
-    shutil.rmtree(IMAGES_DIRECTORY)
-    logger.info('Remove image directory')
-    subprocess.run([python, program1])
-    logger.info('Prepare colors table')
+    if os.path.exists(DATABASE_NAME):
+        os.remove(DATABASE_NAME)
+        logger.info("Removed database")
+    else:
+        logger.info("Database file not found, skipping removal")
+
+    if os.path.exists(IMAGES_DIRECTORY):
+        shutil.rmtree(IMAGES_DIRECTORY)
+        logger.info("Removed image directory")
+    else:
+        logger.info("Image directory not found, skipping removal")
+
+    logger.info('Prepared colors table')
     subprocess.run([python, program2])
-    logger.info('Prepare combinations table')
+    logger.info('Prepared combinations table')
     subprocess.run([python, program3])
-    logger.info('Start application from the scratch')
+    logger.info('Started application from the scratch')
 
 
 run_programs()

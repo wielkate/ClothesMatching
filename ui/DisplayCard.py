@@ -18,11 +18,11 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from Mode import Mode
-from OptionsList import OptionsList
-from constants import IMAGES_DIRECTORY
-from global_clothes import global_clothes
-from global_colors import global_colors
+from models.Mode import Mode
+from ui.OptionsList import OptionsList
+from commons.constants import IMAGES_DIRECTORY
+from commons.global_clothes import global_clothes
+from commons.global_colors import global_colors
 
 
 class DisplayCard(Column):

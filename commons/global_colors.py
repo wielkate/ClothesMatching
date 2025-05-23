@@ -1,8 +1,8 @@
 import logging
 import sqlite3
 
-from constants import DATABASE_NAME, SQL_GET_ALL_COLORS
-from Color import Color
+from commons.constants import DATABASE_NAME, SQL_GET_ALL_COLORS
+from models.Color import Color
 
 logger = logging.getLogger(__name__)
 

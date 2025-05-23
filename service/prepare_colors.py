@@ -2,11 +2,11 @@ import csv
 import logging
 import sqlite3
 
-from constants import (DATABASE_NAME,
-                       COLORS_CSV,
-                       SQL_CREATE_COLORS_TABLE,
-                       SQL_INSERT_INTO_COLORS_TABLE
-                       )
+from commons.constants import (DATABASE_NAME,
+                               COLORS_CSV,
+                               SQL_CREATE_COLORS_TABLE,
+                               SQL_INSERT_INTO_COLORS_TABLE
+                               )
 
 logger = logging.getLogger(__name__)
 

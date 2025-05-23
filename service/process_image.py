@@ -5,8 +5,8 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from constants import IMAGES_DIRECTORY
-from global_colors import global_colors
+from commons.constants import IMAGES_DIRECTORY
+from commons.global_colors import global_colors
 
 logger = logging.getLogger(__name__)
 

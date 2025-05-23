@@ -7,7 +7,7 @@ from flet.core.theme import (IconButtonTheme,
                              )
 from flet.core.types import FontWeight
 
-from MobileApp import MobileApp
+from ui.MobileApp import MobileApp
 
 
 def setup(page):

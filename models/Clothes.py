@@ -1,13 +1,13 @@
 import logging
 import sqlite3
 
-from constants import (DATABASE_NAME,
-                       SQL_CREATE_CLOTHES_TABLE,
-                       SQL_GET_ALL_CLOTHES_ITEMS,
-                       SQL_INSERT_INTO_CLOTHES_TABLE,
-                       SQL_UPDATE_CLOTHES_TABLE,
-                       SQL_DELETE_FROM_CLOTHES_TABLE
-                       )
+from commons.constants import (DATABASE_NAME,
+                               SQL_CREATE_CLOTHES_TABLE,
+                               SQL_GET_ALL_CLOTHES_ITEMS,
+                               SQL_INSERT_INTO_CLOTHES_TABLE,
+                               SQL_UPDATE_CLOTHES_TABLE,
+                               SQL_DELETE_FROM_CLOTHES_TABLE
+                               )
 
 logger = logging.getLogger(__name__)
 

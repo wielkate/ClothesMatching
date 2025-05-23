@@ -1,11 +1,11 @@
 import logging
 import sqlite3
 
-from constants import (DATABASE_NAME,
-                       SQL_INSERT_INTO_COMBINATIONS_TABLE,
-                       SQL_CREATE_COMBINATIONS_TABLE
-                       )
-from global_colors import global_colors
+from commons.constants import (DATABASE_NAME,
+                               SQL_INSERT_INTO_COMBINATIONS_TABLE,
+                               SQL_CREATE_COMBINATIONS_TABLE
+                               )
+from commons.global_colors import global_colors
 
 logger = logging.getLogger(__name__)
 

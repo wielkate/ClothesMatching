@@ -5,20 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
-      <change afterPath="$PROJECT_DIR$/OptionsList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/global_clothes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clothes.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Clothes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Color.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combination.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Combination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/DisplayCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/DisplayCards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileUploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FileUploader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatchCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MatchCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MatchCards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MobileApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MobileApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mode.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Mode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OptionsList.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/OptionsList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_clothes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/global_colors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/global_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/prepare_colors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/prepare_combinations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/process_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_app_from_scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_app_from_scratch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,14 +110,14 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching" />
-      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\database" />
-      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\ui" />
-      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main\scripts" />
       <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\src\package_wielkate\main" />
+      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\service" />
+      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\commons" />
+      <recent name="C:\Users\HP\PycharmProjects\ClothesMatching\models" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClothesMatching" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,8 +139,54 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/package_wielkate/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\ClothesMatching\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClothesMatching" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\ClothesMatching\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -164,7 +231,7 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/App.py</url>
+          <url>file://$PROJECT_DIR$/ui/App.py</url>
           <line>107</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
