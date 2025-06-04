@@ -4,6 +4,8 @@ import shutil
 import subprocess
 import sys
 
+import uvicorn
+
 from src.package_wielkate.main.commons.constants import DATABASE_NAME, IMAGES_DIRECTORY
 
 program1 = 'src/package_wielkate/main/scripts/prepare_colors.py'
@@ -30,6 +32,8 @@ def run_programs():
     logger.info('Prepare combinations table')
     subprocess.run([python, program3])
     logger.info('Start application from the scratch')
+    uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)
+    logger.info("Run fast api")
 
 
 run_programs()
