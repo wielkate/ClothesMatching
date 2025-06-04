@@ -1,11 +1,14 @@
+import logging
 import os
 import shutil
 
+import requests
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
 from flet.core.page import Page
 
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
-from src.package_wielkate.main.scripts.process_image import process_image_with_name
+
+logger = logging.getLogger(__name__)
 
 
 class FileUploader:
@@ -21,8 +24,17 @@ class FileUploader:
                 filename = file.name
                 dest_path = os.path.join(self.upload_dir, filename)
                 shutil.copy(file.path, dest_path)
-                color_name = process_image_with_name(filename)
-                self.add_new_item_action(filename, color_name)
+
+                try:
+                    with open(dest_path, "rb") as f:
+                        files = {"file": f}
+                        response = requests.post("http://127.0.0.1:8000/process-image/", files=files)
+                        json_response = response.json()
+                        logger.info(json_response)
+                        color_name = json_response.get("color")
+                        self.add_new_item_action(filename, color_name)
+                except Exception as ex:
+                    logger.error(f"Failed to upload {filename}: {ex}")
 
     def upload_files(self):
         return self.file_picker.pick_files(allow_multiple=True, file_type=FilePickerFileType.IMAGE)
