@@ -4,8 +4,8 @@ version = "0.0.1"
 dependencies = [
     "flet",
     "pillow",
-    "onnxruntime",
-    "rembg"
+    "requests",
+    "python-multipart"
 ]
 authors = [
     { name = "Ekaterina Mashchenko" },
