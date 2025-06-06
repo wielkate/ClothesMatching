@@ -1,6 +1,7 @@
 import logging
 import os
 import shutil
+from io import BytesIO
 
 import requests
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
@@ -24,17 +25,8 @@ class FileUploader:
                 filename = file.name
                 dest_path = os.path.join(self.upload_dir, filename)
                 shutil.copy(file.path, dest_path)
-
-                try:
-                    with open(dest_path, "rb") as f:
-                        files = {"file": f}
-                        response = requests.post("http://127.0.0.1:8000/process-image/", files=files)
-                        json_response = response.json()
-                        logger.info(json_response)
-                        color_name = json_response.get("color")
-                        self.add_new_item_action(filename, color_name)
-                except Exception as ex:
-                    logger.error(f"Failed to upload {filename}: {ex}")
+                with open(dest_path, 'rb') as image_file:
+                    self.api(image_file, filename)
 
     def upload_files(self):
         return self.file_picker.pick_files(allow_multiple=True, file_type=FilePickerFileType.IMAGE)
@@ -46,3 +38,26 @@ class FileUploader:
         dest_path = os.path.join(self.upload_dir, filename)
         if os.path.exists(dest_path):
             os.remove(dest_path)
+
+    def api(self, file, filename):
+        remove_background_response = requests.post(
+            'https://api.pixian.ai/api/v2/remove-background',
+            files={'image': file},
+            data={
+                'test': True
+            },
+        )
+
+        if remove_background_response.status_code == requests.codes.ok:
+            image_bytes = BytesIO(remove_background_response.content)
+            image_bytes.name = filename
+
+            color_response = requests.post(
+                'https://clothes-matching-api.onrender.com/process_image/',
+                files={'file': image_bytes}
+            )
+            json_response = color_response.json()
+            color_name = json_response.get('color')
+            self.add_new_item_action(filename, color_name)
+        else:
+            print('Error:', remove_background_response.status_code, remove_background_response.text)
