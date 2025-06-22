@@ -20,7 +20,7 @@ from flet.core.types import (ClipBehavior,
 
 from src.package_wielkate.main.models.Mode import Mode
 from src.package_wielkate.main.ui.OptionsList import OptionsList
-from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.resources.auth import BUCKET_URL
 from src.package_wielkate.main.commons.global_clothes import global_clothes
 from src.package_wielkate.main.commons.global_colors import global_colors
 
@@ -78,7 +78,7 @@ class DisplayCard(Column):
                     # Background image
                     Container(
                         content=Image(
-                            src=IMAGES_DIRECTORY + self.filename,
+                            src=BUCKET_URL + self.filename + '?',
                             fit=ImageFit.COVER,
                             width=324,
                             height=576

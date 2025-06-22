@@ -4,7 +4,7 @@ from flet.core.colors import Colors
 from flet.core.container import Container
 from flet.core.types import ClipBehavior, ImageFit
 
-from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.resources.auth import BUCKET_URL
 
 
 class MatchCard(Container):
@@ -29,6 +29,6 @@ class MatchCard(Container):
         self.filename = filename
         self.color_name = color_name
         self.image = DecorationImage(
-            src=IMAGES_DIRECTORY + self.filename,
+            src=BUCKET_URL + self.filename,
             fit=ImageFit.COVER,
         )

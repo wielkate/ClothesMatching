@@ -2,8 +2,10 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 DATABASE_NAME = BASE_DIR.parent / 'database' / 'database.db'
-IMAGES_DIRECTORY = str(BASE_DIR.parent / 'images').__add__('/')
 COLORS_CSV = BASE_DIR.parent / 'resources' / 'Colors.csv'
+
+REMOVE_BG_API = 'https://api.pixian.ai/api/v2/remove-background'
+CLOTHES_MATCHING_API = 'https://clothes-matching-api.onrender.com'
 
 SQL_CREATE_COLORS_TABLE = """
             CREATE TABLE IF NOT EXISTS colors (
