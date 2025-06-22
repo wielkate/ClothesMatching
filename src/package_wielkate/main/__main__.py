@@ -1,13 +1,8 @@
 from flet import Page, Theme, Colors, CrossAxisAlignment, app
-from flet.core.border import BorderSide
-from flet.core.box import BoxConstraints
-from flet.core.buttons import RoundedRectangleBorder
 from flet.core.text_style import TextStyle
 from flet.core.theme import (IconButtonTheme,
                              DividerTheme,
                              ListTileTheme,
-                             SearchViewTheme,
-                             SearchBarTheme,
                              TextButtonTheme
                              )
 from flet.core.types import FontWeight
@@ -37,30 +32,6 @@ def setup(page):
                            font_family=font,
                        )
                        ),
-                       search_bar_theme=SearchBarTheme(
-                           bgcolor=Colors.TRANSPARENT,
-                       ),
-                       search_view_theme=SearchViewTheme(
-                           bgcolor=Colors.BLACK,
-                           header_hint_text_style=TextStyle(
-                               color=Colors.WHITE,
-                               size=20,
-                               weight=FontWeight.W_900,
-                           ),
-                           header_text_style=TextStyle(
-                               color=Colors.WHITE,
-                               size=20,
-                               weight=FontWeight.W_900,
-                           ),
-
-                           size_constraints=BoxConstraints(min_width=324, max_width=324, min_height=660,
-                                                           max_height=660),
-                           border_side=BorderSide(
-                               width=1,
-                               color=Colors.WHITE,
-                           ),
-                           shape=RoundedRectangleBorder(radius=10)
-                       )
                        )
     page.horizontal_alignment = CrossAxisAlignment.CENTER
     page.vertical_alignment = CrossAxisAlignment.CENTER

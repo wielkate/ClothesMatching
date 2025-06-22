@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16214840-ab78-48b4-8d39-389a4dcc7db9" name="Changes" comment="Add basic UI">
+      <change afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/OptionsList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ClothesMatching.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ClothesMatching.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/MobileApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/MobileApp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/commons/global_combinations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/models/Color.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/models/Color.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/models/Combination.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/models/Combination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/scripts/process_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/assets/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/assets/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/DisplayCards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/FileUploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/FileUploader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package_wielkate/main/ui/MatchCards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/package_wielkate/main/ui/MatchCards.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
