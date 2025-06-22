@@ -8,6 +8,7 @@ from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerF
 from flet.core.page import Page
 
 from src.package_wielkate.main.commons.constants import IMAGES_DIRECTORY
+from src.package_wielkate.main.resources.auth import REMOVE_BG_API_KEY, REMOVE_BG_API_PASS
 
 logger = logging.getLogger(__name__)
 
@@ -43,9 +44,8 @@ class FileUploader:
         remove_background_response = requests.post(
             'https://api.pixian.ai/api/v2/remove-background',
             files={'image': file},
-            data={
-                'test': True
-            },
+            data={'test': True},
+            auth=(REMOVE_BG_API_KEY, REMOVE_BG_API_PASS)
         )
 
         if remove_background_response.status_code == requests.codes.ok:
