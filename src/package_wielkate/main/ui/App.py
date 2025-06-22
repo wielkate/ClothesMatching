@@ -14,6 +14,7 @@ from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 from src.package_wielkate.main.commons.global_clothes import global_clothes
 from src.package_wielkate.main.ui.DisplayCards import DisplayCards
 from src.package_wielkate.main.ui.FileUploader import FileUploader
+from src.package_wielkate.main.ui.FileUploader import delete_from_bucket
 
 
 class App(Column):
@@ -95,7 +96,7 @@ class App(Column):
 
     def _delete_card_action_confirmed(self, card):
         global_clothes.delete(card.filename)
-        self.file_uploader.delete_file(card.filename)
+        delete_from_bucket(card.filename)
         self.display_cards.delete_card(card)
         self.update()
 
