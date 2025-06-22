@@ -2,10 +2,11 @@ import logging
 import sqlite3
 
 from src.package_wielkate.main.commons.constants import (DATABASE_NAME,
-                                                         SQL_INSERT_INTO_COMBINATIONS_TABLE,
-                                                         SQL_CREATE_COMBINATIONS_TABLE
-                                                         )
+                               SQL_INSERT_INTO_COMBINATIONS_TABLE,
+                               SQL_CREATE_COMBINATIONS_TABLE
+                               )
 from src.package_wielkate.main.commons.global_colors import global_colors
+from src.package_wielkate.main.models.Mode import Mode
 
 logger = logging.getLogger(__name__)
 
@@ -19,19 +20,7 @@ def __save_to_database__(data: list):
     logger.info(f"Save {len(data)} combinations to database")
 
 
-def are_monochromatic(hsv1, hsv2, hue_threshold=10, saturation_threshold=10):
-    """
-    Check if two colors are monochromatic by comparing their HSV values.
-
-    Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
-    - hue_threshold: Maximum allowed hue difference in degrees
-    - saturation_threshold: Maximum allowed saturation difference in percentage
-    - value_threshold: Maximum allowed brightness (value) difference in percentage
-
-    Returns:
-    - True if colors are monochromatic, False otherwise
-    """
+def are_monochromatic(hsv1, hsv2, hue_threshold=10, saturation_threshold=20):
     h1, s1, v1 = hsv1
     h2, s2, v2 = hsv2
 
@@ -45,25 +34,11 @@ def are_monochromatic(hsv1, hsv2, hue_threshold=10, saturation_threshold=10):
 
 
 def monochrome_for(for_color):
-    monochrome_colors = [color.name for color in global_colors if are_monochromatic(color.hsv, for_color.hsv)]
-    return ', '.join(monochrome_colors)
+    return [[for_color.name, color.name, Mode.MONOCHROME.value] for color in global_colors if are_monochromatic(color.hsv, for_color.hsv)]
 
 
-def are_analogous(hsv1, hsv2, hue_min_threshold=10, hue_max_threshold=40, saturation_threshold=10,
-                  value_threshold=10):
-    """
-    Check if two colors are analogous by comparing their HSV values.
-
-    Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
-    - min_hue_threshold: Minimum allowed hue difference in degrees (to be different from monochrome)
-    - max_hue_threshold: Maximum allowed hue difference in degrees
-    - saturation_threshold: Maximum allowed saturation difference in percentage
-    - value_threshold: Maximum allowed brightness (value) difference in percentage
-
-    Returns:
-    - True if colors are analogous, False otherwise
-    """
+def are_analogous(hsv1, hsv2, hue_min_threshold=10, hue_max_threshold=40, saturation_threshold=20,
+                  value_threshold=20):
     h1, s1, v1 = hsv1
     h2, s2, v2 = hsv2
 
@@ -80,23 +55,10 @@ def are_analogous(hsv1, hsv2, hue_min_threshold=10, hue_max_threshold=40, satura
 
 
 def analogous_for(for_color):
-    analogous_colors = [color.name for color in global_colors if are_analogous(color.hsv, for_color.hsv)]
-    return ', '.join(analogous_colors)
+    return [[for_color.name, color.name, Mode.ANALOGOUS.value] for color in global_colors if are_analogous(color.hsv, for_color.hsv)]
 
 
 def are_complementary(hsv1, hsv2, hue_threshold=20, saturation_threshold=20, value_threshold=20):
-    """
-    Check if two colors are complementary by comparing their HSV values.
-
-    Parameters:
-    - hsv1, hsv2: Tuples of (H, S, V) values where: H is in [0, 360], S and V are in [0, 100]
-    - hue_threshold: Allowed deviation from 180° hue difference
-    - saturation_threshold: Allowed saturation difference (in %)
-    - value_threshold: Allowed brightness (value) difference (in %)
-
-    Returns:
-    - True if colors are complementary, False otherwise
-    """
     h1, s1, v1 = hsv1
     h2, s2, v2 = hsv2
 
@@ -113,13 +75,11 @@ def are_complementary(hsv1, hsv2, hue_threshold=20, saturation_threshold=20, val
 
 
 def complementary_for(for_color):
-    complementary_colors = [color.name for color in global_colors if are_complementary(color.hsv, for_color.hsv)]
-    return ', '.join(complementary_colors)
+    return [[for_color.name, color.name, Mode.COMPLEMENTARY.value] for color in global_colors if are_complementary(color.hsv, for_color.hsv)]
 
 
 # main
-combinations = [
-    [color.name, monochrome_for(color), analogous_for(color), complementary_for(color)]
-    for color in global_colors
-]
-__save_to_database__(combinations)
+color_modes = (monochrome_for, complementary_for, analogous_for)
+for mode in color_modes :
+    data = [row for color in global_colors for row in mode(color)]
+    __save_to_database__(data)

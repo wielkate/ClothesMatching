@@ -15,10 +15,10 @@ SQL_CREATE_COLORS_TABLE = """
         """
 SQL_CREATE_COMBINATIONS_TABLE = """
             CREATE TABLE IF NOT EXISTS combinations (
-                color TEXT PRIMARY KEY,
-                monochrome TEXT,
-                analogous TEXT,
-                complementary TEXT
+                id INTEGER PRIMARY KEY,
+                color TEXT NOT NULL,
+                related_color TEXT,
+                mode TEXT CHECK (mode IN ('Monochrome', 'Analogous', 'Complementary'))
             )
         """
 SQL_CREATE_CLOTHES_TABLE = """
@@ -35,8 +35,8 @@ SQL_INSERT_INTO_COLORS_TABLE = """
                 """
 SQL_INSERT_INTO_COMBINATIONS_TABLE = """
                 INSERT INTO combinations
-                (color, monochrome, analogous, complementary)
-                VALUES (?, ?, ?, ?)
+                (color, related_color, mode)
+                VALUES (?, ?, ?)
              """
 SQL_INSERT_INTO_CLOTHES_TABLE = """
                         INSERT OR REPLACE 
@@ -45,7 +45,10 @@ SQL_INSERT_INTO_CLOTHES_TABLE = """
                         """
 
 SQL_GET_ALL_COLORS = 'SELECT * FROM colors'
-SQL_GET_ALL_COMBINATIONS = 'SELECT * FROM combinations'
+SQL_GET_COMBINATIONS_BY_MODE = """
+                                SELECT * FROM combinations
+                                WHERE mode = ?
+                                """
 SQL_GET_ALL_CLOTHES_ITEMS = 'SELECT * FROM clothes'
 
 SQL_UPDATE_CLOTHES_TABLE = 'UPDATE clothes SET color = ? WHERE filename = ?'
