@@ -3,7 +3,6 @@ name = "ClothesMatching"
 version = "0.0.1"
 dependencies = [
     "flet",
-    "pillow",
     "requests",
     "python-multipart"
 ]

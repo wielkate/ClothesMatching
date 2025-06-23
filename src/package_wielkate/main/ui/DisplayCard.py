@@ -1,3 +1,4 @@
+import requests
 from flet.core import alignment, padding
 from flet.core.border import BorderSide, Border
 from flet.core.colors import Colors
@@ -18,11 +19,16 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from src.package_wielkate.main.models.Mode import Mode
-from src.package_wielkate.main.ui.OptionsList import OptionsList
-from src.package_wielkate.main.resources.auth import BUCKET_URL
+from src.package_wielkate.main.commons.constants import CLOTHES_MATCHING_API
 from src.package_wielkate.main.commons.global_clothes import global_clothes
-from src.package_wielkate.main.commons.global_colors import global_colors
+from src.package_wielkate.main.models.Mode import Mode
+from src.package_wielkate.main.resources.auth import BUCKET_URL
+from src.package_wielkate.main.ui.OptionsList import OptionsList
+
+
+def load_color_names():
+    response = requests.get(f'{CLOTHES_MATCHING_API}/get_color_names')
+    return [row["color"] for row in response.json()]
 
 
 class DisplayCard(Column):
@@ -37,7 +43,7 @@ class DisplayCard(Column):
         self.return_clothes_action = return_clothes_action
 
         self.color_options = OptionsList(
-            items=[color.name for color in global_colors],
+            items=load_color_names(),
             on_select=self._select_color,
             on_back=lambda e: self._close_options(self.color_options)
         )
