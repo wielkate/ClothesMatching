@@ -1,26 +1,26 @@
 import logging
-import sqlite3
 from collections import defaultdict
 
-from src.package_wielkate.main.commons.constants import DATABASE_NAME, SQL_GET_COMBINATIONS_BY_MODE
+import requests
+
+from src.package_wielkate.main.commons.constants import CLOTHES_MATCHING_API
 from src.package_wielkate.main.models.Mode import Mode
 
 logger = logging.getLogger(__name__)
 
 
-def __load_combinations__(mode):
-    with sqlite3.connect(DATABASE_NAME) as connection:
-        cursor = connection.cursor()
-        cursor.execute(SQL_GET_COMBINATIONS_BY_MODE, (mode,))
-
-        grouped = defaultdict(list)
-        for id, base_color, related_color, mode in cursor.fetchall():
-            grouped[base_color].append(related_color)
+def load_combinations(mode):
+    response = requests.get(f'{CLOTHES_MATCHING_API}/get_combinations/{mode}')
+    grouped = defaultdict(list)
+    for item in response.json():
+        base_color = item['color']
+        related_color = item['related_color']
+        grouped[base_color].append(related_color)
 
     logging.info(f'Load {len(grouped)} {mode.lower()} combinations from database')
     return grouped
 
 
-global_monochrome = __load_combinations__(Mode.MONOCHROME.value)
-global_complementary = __load_combinations__(Mode.COMPLEMENTARY.value)
-global_analogous = __load_combinations__(Mode.ANALOGOUS.value)
+global_monochrome = load_combinations(Mode.MONOCHROME.value)
+global_complementary = load_combinations(Mode.COMPLEMENTARY.value)
+global_analogous = load_combinations(Mode.ANALOGOUS.value)
