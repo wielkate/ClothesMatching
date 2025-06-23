@@ -11,7 +11,7 @@ from flet.core.text import Text
 from flet.core.text_button import TextButton
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
-from commons.global_clothes import global_clothes
+from endpoints.endpoints import add_clothing_item, delete_clothing_item, edit_clothing_item
 from ui.DisplayCards import DisplayCards
 from ui.FileUploader import FileUploader
 
@@ -30,6 +30,7 @@ class App(Column):
         self.page = page
         self.file_uploader = FileUploader(self._add_new_card_action)
         self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action, self._return_clothes_action)
+        self.matched_cards = Column(scroll=ScrollMode.HIDDEN)
         self.no_item_alert = self._create_no_items_alert()
         self.delete_alert = self._create_delete_alert()
         self.card_to_delete = None
@@ -37,7 +38,7 @@ class App(Column):
             self._create_header(),
             Divider(),
             self.display_cards,
-            global_clothes
+            self.matched_cards
         ]
         self.file_uploader.attach_to_page(self.page)
 
@@ -81,7 +82,7 @@ class App(Column):
         self.file_uploader.upload_files()
 
     def _add_new_card_action(self, filename, color_name):
-        global_clothes.add(filename, color_name)
+        add_clothing_item(filename, color_name)
         self.display_cards.add_card(filename, color_name)
         self.update()
 
@@ -94,18 +95,18 @@ class App(Column):
         self.page.close(self.delete_alert)
 
     def _delete_card_action_confirmed(self, card):
-        global_clothes.delete(card.filename)
+        delete_clothing_item(card.filename)
         self.display_cards.delete_card(card)
         self.update()
 
     def _edit_card_action(self, card):
-        global_clothes.edit(card.filename, card.color_name)
+        edit_clothing_item(card.filename, card.color_name)
         self.update()
 
     def _return_clothes_action(self, items):
         if not items:
             self.page.open(self.no_item_alert)
             return
-        global_clothes.controls = items
+        self.matched_cards.controls = items
         self.scroll_to(offset=800, duration=2000, curve=AnimationCurve.EASE_IN_OUT)
         self.update()
