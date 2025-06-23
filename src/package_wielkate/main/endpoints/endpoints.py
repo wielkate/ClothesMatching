@@ -1,4 +1,3 @@
-from collections import defaultdict
 from io import BytesIO
 
 import requests
@@ -40,18 +39,6 @@ def load_color_names():
     return response.json()
 
 
-# combinations
-def load_combinations(mode):
-    response = requests.get(f'{CLOTHES_MATCHING_API}/get_combinations/{mode}')
-    grouped = defaultdict(list)
-    for item in response.json():
-        base_color = item['color']
-        related_color = item['related_color']
-        grouped[base_color].append(related_color)
-
-    return grouped
-
-
 # clothes
 def load_clothes() -> list[tuple[str, str]]:
     response = requests.get(f'{CLOTHES_MATCHING_API}/get_clothes')
@@ -76,3 +63,22 @@ def edit_clothing_item(filename: str, new_color: str) -> None:
 
 def delete_clothing_item(filename: str) -> None:
     requests.delete(f'{CLOTHES_MATCHING_API}/delete/{filename}')
+
+
+# matched cards
+def get_matched_colors(mode: str, color: str):
+    data = {
+        "mode": mode,
+        "color": color
+    }
+    response = requests.post(f'{CLOTHES_MATCHING_API}/get_combinations', data=data)
+    return response.json()
+
+
+def get_ids(colors: list[str], exclude_id: str):
+    data = {
+        "colors": colors,
+        "exclude_id": exclude_id
+    }
+    response = requests.post(f'{CLOTHES_MATCHING_API}/get_ids', data=data)
+    return response.json()

@@ -2,7 +2,7 @@ from flet.core.animation import AnimationCurve
 from flet.core.row import Row
 from flet.core.types import MainAxisAlignment, ScrollMode
 
-from commons.global_clothes import global_clothes
+from endpoints.endpoints import load_clothes
 from ui.DisplayCard import DisplayCard
 
 
@@ -21,10 +21,10 @@ class DisplayCards(Row):
         return [DisplayCard(self.delete_card_action,
                             self.edit_card_action,
                             self.return_clothes_action,
-                            item.filename,
-                            item.color_name
+                            filename,
+                            color_name
                             )
-                for item in global_clothes.list][::-1]
+                for filename, color_name in load_clothes()]
 
     def add_card(self, filename, color_name):
         self.controls.insert(0, DisplayCard(self.delete_card_action,

@@ -8,7 +8,7 @@ from resources.auth import BUCKET_URL
 
 
 class MatchCard(Container):
-    def __init__(self, filename, color_name):
+    def __init__(self, filename):
         super().__init__(
             width=342,
             height=608,
@@ -27,7 +27,6 @@ class MatchCard(Container):
 
         )
         self.filename = filename
-        self.color_name = color_name
         self.image = DecorationImage(
             src=BUCKET_URL + self.filename,
             fit=ImageFit.COVER,

@@ -18,10 +18,10 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from commons.global_clothes import global_clothes
-from endpoints.endpoints import load_color_names
+from endpoints.endpoints import load_color_names, get_ids, get_matched_colors
 from models.Mode import Mode
 from resources.auth import BUCKET_URL
+from ui.MatchCard import MatchCard
 from ui.OptionsList import OptionsList
 
 
@@ -148,15 +148,9 @@ class DisplayCard(Column):
         self.update()
 
     def _get_matched_items_by(self, mode):
-        match mode:
-            case Mode.MONOCHROME.value:
-                return global_clothes.get_monochrome_for(self.filename, self.color_name)
-            case Mode.ANALOGOUS.value:
-                return global_clothes.get_analogous_colors_for(self.filename, self.color_name)
-            case Mode.COMPLEMENTARY.value:
-                return global_clothes.get_complementary_colors_for(self.filename, self.color_name)
-            case _:
-                return []
+        colors = get_matched_colors(mode, self.color_name)
+        ids = get_ids(colors, self.filename)
+        return [MatchCard(id) for id in ids]
 
     def _select_color(self, e):
         selected_color = e.control.data
