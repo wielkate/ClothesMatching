@@ -19,11 +19,11 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from src.package_wielkate.main.commons.constants import CLOTHES_MATCHING_API
-from src.package_wielkate.main.commons.global_clothes import global_clothes
-from src.package_wielkate.main.models.Mode import Mode
-from src.package_wielkate.main.resources.auth import BUCKET_URL
-from src.package_wielkate.main.ui.OptionsList import OptionsList
+from commons.constants import CLOTHES_MATCHING_API
+from commons.global_clothes import global_clothes
+from models.Mode import Mode
+from resources.auth import BUCKET_URL
+from ui.OptionsList import OptionsList
 
 
 def load_color_names():
@@ -65,8 +65,8 @@ class DisplayCard(Column):
 
     def _create_display_card(self):
         return Container(
-            width=324,
-            height=636,
+            width=342,
+            height=668,
             border_radius=10,
             clip_behavior=ClipBehavior.HARD_EDGE,
             border=Border(
@@ -86,8 +86,8 @@ class DisplayCard(Column):
                         content=Image(
                             src=BUCKET_URL + self.filename + '?',
                             fit=ImageFit.COVER,
-                            width=324,
-                            height=576
+                            width=342,
+                            height=608
                         ),
                     ),
                     # With gradient

@@ -5,8 +5,8 @@ import requests
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
 from flet.core.page import Page
 
-from src.package_wielkate.main.commons.constants import REMOVE_BG_API, CLOTHES_MATCHING_API
-from src.package_wielkate.main.resources.auth import REMOVE_BG_API_KEY, REMOVE_BG_API_PASS
+from commons.constants import REMOVE_BG_API, CLOTHES_MATCHING_API
+from resources.auth import REMOVE_BG_API_KEY, REMOVE_BG_API_PASS
 
 logger = logging.getLogger(__name__)
 

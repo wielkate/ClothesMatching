@@ -2,47 +2,43 @@ import asyncio
 import random
 
 from flet import Container, Colors, ClipBehavior
-from flet.core import padding, border
+from flet.core import padding
 from flet.core.animation import AnimationCurve, Animation
 from flet.core.page import Page
 from flet.core.stack import Stack
 
-from src.package_wielkate.main.ui.App import App
+from ui.App import App
 
 WELCOME_LETTER_MAP = [
     # W
-    (3, 45), (3, 46), (3, 47), (3, 48), (3, 49), (3, 50), (3, 51), (4, 51), (5, 50), (6, 49),
-    (7, 50), (8, 51), (9, 51), (9, 50), (9, 49), (9, 48), (9, 47), (9, 46), (9, 45),
+    (3, 40), (3, 41), (3, 42), (3, 43), (3, 44), (3, 45), (3, 46), (4, 46), (5, 45), (6, 44),
+    (7, 45), (8, 46), (9, 46), (9, 45), (9, 44), (9, 43), (9, 42), (9, 41), (9, 40),
     # E
-    (11, 45), (11, 46), (11, 47), (11, 48), (11, 49), (11, 50), (11, 51), (12, 45), (13, 45), (14, 45),
-    (12, 48), (13, 48), (14, 48), (12, 51), (13, 51), (14, 51),
+    (11, 40), (11, 41), (11, 42), (11, 43), (11, 44), (11, 45), (11, 46), (12, 40), (13, 40), (14, 40),
+    (12, 43), (13, 43), (14, 43), (12, 46), (13, 46), (14, 46),
     # L
-    (16, 45), (16, 46), (16, 47), (16, 48), (16, 49), (16, 50), (16, 51), (17, 51), (18, 51), (19, 51),
+    (16, 40), (16, 41), (16, 42), (16, 43), (16, 44), (16, 45), (16, 46), (17, 46), (18, 46), (19, 46),
     # C
-    (21, 45), (21, 46), (21, 47), (21, 48), (21, 49), (21, 50), (21, 51), (22, 45), (23, 45), (24, 45),
-    (22, 51), (23, 51), (24, 51),
+    (21, 40), (21, 41), (21, 42), (21, 43), (21, 44), (21, 45), (21, 46), (22, 40), (23, 40), (24, 40),
+    (22, 46), (23, 46), (24, 46),
     # O
-    (26, 45), (26, 46), (26, 47), (26, 48), (26, 49), (26, 50), (26, 51), (27, 45), (28, 45), (29, 45),
-    (27, 51), (28, 51), (29, 51), (30, 45), (30, 46), (30, 47), (30, 48), (30, 49), (30, 50), (30, 51),
+    (26, 40), (26, 41), (26, 42), (26, 43), (26, 44), (26, 45), (26, 46), (27, 40), (28, 40), (29, 40),
+    (27, 46), (28, 46), (29, 46), (30, 40), (30, 41), (30, 42), (30, 43), (30, 44), (30, 45), (30, 46),
     # M
-    (32, 45), (32, 46), (32, 47), (32, 48), (32, 49), (32, 50), (32, 51), (33, 46), (34, 47), (35, 46),
-    (36, 45), (36, 46), (36, 47), (36, 48), (36, 49), (36, 50), (36, 51),
+    (32, 40), (32, 41), (32, 42), (32, 43), (32, 44), (32, 45), (32, 46), (33, 41), (34, 42), (35, 41),
+    (36, 40), (36, 41), (36, 42), (36, 43), (36, 44), (36, 45), (36, 46),
     # E
-    (38, 45), (38, 46), (38, 47), (38, 48), (38, 49), (38, 50), (38, 51), (39, 45), (40, 45), (41, 45),
-    (39, 48), (40, 48), (41, 48), (39, 51), (40, 51), (41, 51),
+    (38, 40), (38, 41), (38, 42), (38, 43), (38, 44), (38, 45), (38, 46), (39, 40), (40, 40), (41, 40),
+    (39, 43), (40, 43), (41, 43), (39, 46), (40, 46), (41, 46),
 ]
 SQUARE_SIZE = 7
-SPACING = 1
+SPACING = 2
 
 
 def create_mobile_container(content=None):
     return Container(
-        width=360,
-        height=800,
-        bgcolor=Colors.BLACK,
-        border_radius=40,
-        border=border.all(0.5, Colors.WHITE),
-        padding=padding.only(top=35, left=18, right=18, bottom=35),
+        expand=True,
+        padding=padding.only(top=45, left=18, right=18, bottom=25),
         clip_behavior=ClipBehavior.HARD_EDGE,
         content=content,
     )
@@ -54,15 +50,15 @@ def create_animated_square():
         height=SQUARE_SIZE,
         bgcolor=Colors.WHITE,
         border_radius=2,
-        left=random.randint(10, 330),
-        top=random.randint(10, 700),
+        left=random.randint(10, 430),
+        top=random.randint(10, 800),
         animate_position=Animation(2000, curve=AnimationCurve.EASE_IN_OUT),
         animate_opacity=1000
     )
 
 
 def created_animated_squares():
-    return [create_animated_square() for _, _ in WELCOME_LETTER_MAP]
+    return [create_animated_square() for _ in WELCOME_LETTER_MAP]
 
 
 class MobileApp(Stack):
@@ -72,6 +68,7 @@ class MobileApp(Stack):
         self.app = create_mobile_container(App(self.page))
         self.squares = created_animated_squares()
         self.controls = [create_mobile_container(), *self.squares]
+        self.expand = True
 
     def did_mount(self):
         self.page.run_task(self.start_app)
@@ -97,7 +94,7 @@ class MobileApp(Stack):
             square.update()
 
     async def fade_in_app(self):
-        self.controls.append(self.app)
+        self.controls = [self.app]
         self.update()
         await asyncio.sleep(0.1)
         self.app.content.opacity = 1.0

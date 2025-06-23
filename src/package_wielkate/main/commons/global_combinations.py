@@ -3,8 +3,8 @@ from collections import defaultdict
 
 import requests
 
-from src.package_wielkate.main.commons.constants import CLOTHES_MATCHING_API
-from src.package_wielkate.main.models.Mode import Mode
+from commons.constants import CLOTHES_MATCHING_API
+from models.Mode import Mode
 
 logger = logging.getLogger(__name__)
 

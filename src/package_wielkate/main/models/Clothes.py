@@ -1,6 +1,6 @@
 import requests
 
-from src.package_wielkate.main.commons.constants import CLOTHES_MATCHING_API
+from commons.constants import CLOTHES_MATCHING_API
 
 
 class Clothes:

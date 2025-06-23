@@ -14,8 +14,8 @@ class OptionsList(Container):
         super().__init__(
             visible=False,
             expand=True,
-            width=323,
-            height=636,
+            width=342,
+            height=668,
             border_radius=10,
             padding=10,
             clip_behavior=ClipBehavior.HARD_EDGE,

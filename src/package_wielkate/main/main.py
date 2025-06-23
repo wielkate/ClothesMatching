@@ -7,7 +7,7 @@ from flet.core.theme import (IconButtonTheme,
                              )
 from flet.core.types import FontWeight
 
-from src.package_wielkate.main.ui.MobileApp import MobileApp
+from ui.MobileApp import MobileApp
 
 
 def setup(page):
@@ -35,7 +35,7 @@ def setup(page):
                        )
     page.horizontal_alignment = CrossAxisAlignment.CENTER
     page.vertical_alignment = CrossAxisAlignment.CENTER
-    page.bgcolor = Colors.BLUE_GREY_900
+    page.bgcolor = Colors.BLACK
 
 
 def main(page: Page):

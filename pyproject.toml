@@ -9,15 +9,33 @@ dependencies = [
 authors = [
     { name = "Ekaterina Mashchenko" },
 ]
-description = "A small color-picking application"
+description = ""
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Android",
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Homepage = "https://github.com/wielkate/ClothesMatching"
+
+[tool.flet]
+product = "Clothes matcher"
+
+[tool.flet.app]
+path = "src/package_wielkate/main"
+
+[tool.flet.splash]
+color = "#000000"
+dark_color = "#000000"
+
+[tool.flet.app.boot_screen]
+show = true
+message = "Preparing the app for its first launch…"
+
+[tool.flet.app.startup_screen]
+show = true
+message = "Starting up the app…"
