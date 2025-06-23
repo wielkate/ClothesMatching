@@ -11,10 +11,10 @@ from flet.core.text import Text
 from flet.core.text_button import TextButton
 from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
-from src.package_wielkate.main.commons.global_clothes import global_clothes
-from src.package_wielkate.main.ui.DisplayCards import DisplayCards
-from src.package_wielkate.main.ui.FileUploader import FileUploader
-from src.package_wielkate.main.ui.FileUploader import delete_from_bucket
+from commons.global_clothes import global_clothes
+from ui.DisplayCards import DisplayCards
+from ui.FileUploader import FileUploader
+from ui.FileUploader import delete_from_bucket
 
 
 class App(Column):
