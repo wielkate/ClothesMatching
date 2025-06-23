@@ -10,7 +10,9 @@ from flet.core.types import ClipBehavior, ScrollMode, TextAlign
 
 
 class OptionsList(Container):
-    def __init__(self, items, on_select, on_back):
+    def __init__(self, on_select, on_back):
+        self.items_column = Column(scroll=ScrollMode.AUTO)
+        self.on_select = on_select
         super().__init__(
             visible=False,
             expand=True,
@@ -34,21 +36,22 @@ class OptionsList(Container):
                     # Scrollable list area
                     Container(
                         expand=True,
-                        content=Column(
-                            scroll=ScrollMode.AUTO,
-                            controls=[
-                                *[
-                                    ListTile(
-                                        title=Text(item, text_align=TextAlign.CENTER),
-                                        data=item,
-                                        on_click=on_select
-                                    )
-                                    for item in items
-                                ]
-                            ]
-                        )
+                        content=self.items_column
                     )
                 ],
                 expand=True
             )
         )
+
+    def show_items(self, items):
+        self.items_column.controls = [
+            *[
+                ListTile(
+                    title=Text(item, text_align=TextAlign.CENTER),
+                    data=item,
+                    on_click=self.on_select
+                )
+                for item in items
+            ]
+        ]
+        self.items_column.update()

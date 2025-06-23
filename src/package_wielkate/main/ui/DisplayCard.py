@@ -37,12 +37,10 @@ class DisplayCard(Column):
         self.return_clothes_action = return_clothes_action
 
         self.color_options = OptionsList(
-            items=load_color_names(),
             on_select=self._select_color,
             on_back=lambda e: self._close_options(self.color_options)
         )
         self.mode_options = OptionsList(
-            items=[mode.value for mode in Mode],
             on_select=self._select_mode,
             on_back=lambda e: self._close_options(self.mode_options)
         )
@@ -118,12 +116,12 @@ class DisplayCard(Column):
                                         IconButton(
                                             icon=Icons.CREATE_ROUNDED,
                                             tooltip="Edit color name",
-                                            on_click=lambda e: self._open_options(self.color_options),
+                                            on_click=lambda e: self._open_options(self.color_options, load_color_names()),
                                         ),
                                         IconButton(
                                             icon=Icons.DONE_ROUNDED,
                                             tooltip="Choose item",
-                                            on_click=lambda e: self._open_options(self.mode_options)
+                                            on_click=lambda e: self._open_options(self.mode_options, [mode.value for mode in Mode])
                                         ),
                                         IconButton(
                                             icon=Icons.DELETE_OUTLINE_ROUNDED,
@@ -139,7 +137,8 @@ class DisplayCard(Column):
             ),
         )
 
-    def _open_options(self, options_list):
+    def _open_options(self, options_list: OptionsList, items):
+        options_list.show_items(items)
         options_list.visible = True
         self.update()
 
