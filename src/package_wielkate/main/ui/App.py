@@ -14,7 +14,6 @@ from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 from commons.global_clothes import global_clothes
 from ui.DisplayCards import DisplayCards
 from ui.FileUploader import FileUploader
-from ui.FileUploader import delete_from_bucket
 
 
 class App(Column):
@@ -96,7 +95,6 @@ class App(Column):
 
     def _delete_card_action_confirmed(self, card):
         global_clothes.delete(card.filename)
-        delete_from_bucket(card.filename)
         self.display_cards.delete_card(card)
         self.update()
 

@@ -1,4 +1,3 @@
-import requests
 from flet.core import alignment, padding
 from flet.core.border import BorderSide, Border
 from flet.core.colors import Colors
@@ -19,16 +18,11 @@ from flet.core.types import (ClipBehavior,
                              TextAlign,
                              ScrollMode)
 
-from commons.constants import CLOTHES_MATCHING_API
 from commons.global_clothes import global_clothes
+from endpoints.endpoints import load_color_names
 from models.Mode import Mode
 from resources.auth import BUCKET_URL
 from ui.OptionsList import OptionsList
-
-
-def load_color_names():
-    response = requests.get(f'{CLOTHES_MATCHING_API}/get_color_names')
-    return [row["color"] for row in response.json()]
 
 
 class DisplayCard(Column):
