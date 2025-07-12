@@ -9,7 +9,7 @@ dependencies = [
 authors = [
     { name = "Ekaterina Mashchenko" },
 ]
-description = ""
+description = "Clothes Matcher is an application designed to help color-blind individuals match their clothing items based on color."
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [

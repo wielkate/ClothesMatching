@@ -148,6 +148,9 @@ class DisplayCard(Column):
 
     def _get_matched_items_by(self, mode):
         colors = get_matched_colors(mode, self.color_name)
+        if not colors:
+            return []
+
         ids = get_ids(colors, self.filename)
         return [MatchCard(id) for id in ids]
 
