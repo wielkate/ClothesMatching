@@ -170,3 +170,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Api keys
+src/package_wielkate/main/resources/auth.py
