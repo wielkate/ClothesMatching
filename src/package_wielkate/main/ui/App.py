@@ -6,6 +6,7 @@ from flet.core.divider import Divider
 from flet.core.icon_button import IconButton
 from flet.core.icons import Icons
 from flet.core.page import Page
+import asyncio
 from flet.core.row import Row
 from flet.core.text import Text
 from flet.core.text_button import TextButton
@@ -13,12 +14,10 @@ from flet.core.types import MainAxisAlignment, ScrollMode, FontWeight
 
 from endpoints.endpoints import add_clothing_item, delete_clothing_item, edit_clothing_item
 from ui.DisplayCards import DisplayCards
-from ui.FileUploader import FileUploader
 
 
 class App(Column):
-    # application's root control is a Column containing all other controls
-    def __init__(self, page: Page):
+    def __init__(self, page: Page, initial_clothes = None):
         super().__init__(
             scroll=ScrollMode.HIDDEN,
             expand=True,
@@ -28,19 +27,21 @@ class App(Column):
             animate_opacity=1000
         )
         self.page = page
-        self.file_uploader = FileUploader(self._add_new_card_action)
-        self.display_cards = DisplayCards(self._delete_card_action, self._edit_card_action, self._return_clothes_action)
+        self.file_uploader = None
+        self.display_cards = DisplayCards(self._delete_card_action,self._edit_card_action,self._return_clothes_action, initial_clothes)
+        # load clothes asynchronously to avoid blocking UI on startup
+        asyncio.create_task(self.display_cards.load_initial())
         self.matched_cards = Column(scroll=ScrollMode.HIDDEN)
         self.no_item_alert = self._create_no_items_alert()
         self.delete_alert = self._create_delete_alert()
         self.card_to_delete = None
+
         self.controls = [
             self._create_header(),
             Divider(),
             self.display_cards,
             self.matched_cards
         ]
-        self.file_uploader.attach_to_page(self.page)
 
     def _create_header(self):
         return Row(
@@ -78,7 +79,14 @@ class App(Column):
             actions_alignment=MainAxisAlignment.END,
         )
 
+    # Lazy load FileUploader only when needed
     def _add_clicked(self, e):
+        if not self.file_uploader:
+            from ui.FileUploader import FileUploader
+            self.file_uploader = FileUploader(self._add_new_card_action)
+            self.file_uploader.attach_to_page(self.page)
+            self.page.update()
+
         self.file_uploader.upload_files()
 
     def _add_new_card_action(self, filename, color_name):

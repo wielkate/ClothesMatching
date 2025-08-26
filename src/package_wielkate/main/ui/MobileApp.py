@@ -7,8 +7,6 @@ from flet.core.animation import AnimationCurve, Animation
 from flet.core.page import Page
 from flet.core.stack import Stack
 
-from ui.App import App
-
 WELCOME_LETTER_MAP = [
     # W
     (3, 40), (3, 41), (3, 42), (3, 43), (3, 44), (3, 45), (3, 46), (4, 46), (5, 45), (6, 44),
@@ -65,7 +63,6 @@ class MobileApp(Stack):
     def __init__(self, page: Page):
         super().__init__()
         self.page = page
-        self.app = create_mobile_container(App(self.page))
         self.squares = created_animated_squares()
         self.controls = [create_mobile_container(), *self.squares]
         self.expand = True
@@ -74,7 +71,7 @@ class MobileApp(Stack):
         self.page.run_task(self.start_app)
 
     async def start_app(self):
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(1)
         self.show_welcome_animation()
         await asyncio.sleep(4)
         self.fade_out_squares()
@@ -94,6 +91,10 @@ class MobileApp(Stack):
             square.update()
 
     async def fade_in_app(self):
+        # Lazy import here to avoid blocking startup before splash is visible
+        from ui.App import App  # noqa: WPS433 (runtime import on purpose)
+        self.app = create_mobile_container(App(self.page))
+        self.update()
         self.controls = [self.app]
         self.update()
         await asyncio.sleep(0.1)

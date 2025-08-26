@@ -1,3 +1,5 @@
+import asyncio
+
 from flet.core.animation import AnimationCurve
 from flet.core.row import Row
 from flet.core.types import MainAxisAlignment, ScrollMode
@@ -7,7 +9,7 @@ from ui.DisplayCard import DisplayCard
 
 
 class DisplayCards(Row):
-    def __init__(self, delete_card_action, edit_card_action, return_clothes_action):
+    def __init__(self, delete_card_action, edit_card_action, return_clothes_action, initial_clothes):
         super().__init__(
             alignment=MainAxisAlignment.SPACE_AROUND,
             scroll=ScrollMode.HIDDEN,
@@ -15,16 +17,12 @@ class DisplayCards(Row):
         self.delete_card_action = delete_card_action
         self.edit_card_action = edit_card_action
         self.return_clothes_action = return_clothes_action
-        self.controls = self._load_clothes_from_memory()
 
-    def _load_clothes_from_memory(self):
-        return [DisplayCard(self.delete_card_action,
-                            self.edit_card_action,
-                            self.return_clothes_action,
-                            filename,
-                            color_name
-                            )
-                for filename, color_name in load_clothes()]
+    async def load_initial(self):
+        clothes = await asyncio.to_thread(load_clothes)
+        for filename, color_name in clothes:
+            self.add_card(filename, color_name)
+        self.update()
 
     def add_card(self, filename, color_name):
         self.controls.insert(0, DisplayCard(self.delete_card_action,

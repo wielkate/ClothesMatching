@@ -11,8 +11,8 @@ from ui.MobileApp import MobileApp
 
 
 def setup(page):
-    font = 'Comfortaa'
-    page.fonts = {font: "/fonts/Comfortaa.ttf"}
+    font = 'Consolas'
+    page.fonts = {font: "Consolas"}
     page.theme = Theme(font_family=font,
                        icon_button_theme=IconButtonTheme(foreground_color=Colors.WHITE,
                                                          icon_size=30,
