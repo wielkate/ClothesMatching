@@ -28,7 +28,7 @@ class App(Column):
         )
         self.page = page
         self.file_uploader = None
-        self.display_cards = DisplayCards(self._delete_card_action,self._edit_card_action,self._return_clothes_action, initial_clothes)
+        self.display_cards = DisplayCards(self._delete_card_action,self._edit_card_action,self._return_clothes_action)
         # load clothes asynchronously to avoid blocking UI on startup
         asyncio.create_task(self.display_cards.load_initial())
         self.matched_cards = Column(scroll=ScrollMode.HIDDEN)

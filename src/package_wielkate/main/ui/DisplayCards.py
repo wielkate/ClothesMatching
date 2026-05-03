@@ -9,7 +9,7 @@ from ui.DisplayCard import DisplayCard
 
 
 class DisplayCards(Row):
-    def __init__(self, delete_card_action, edit_card_action, return_clothes_action, initial_clothes):
+    def __init__(self, delete_card_action, edit_card_action, return_clothes_action):
         super().__init__(
             alignment=MainAxisAlignment.SPACE_AROUND,
             scroll=ScrollMode.HIDDEN,
@@ -19,10 +19,13 @@ class DisplayCards(Row):
         self.return_clothes_action = return_clothes_action
 
     async def load_initial(self):
-        clothes = await asyncio.to_thread(load_clothes)
-        for filename, color_name in clothes:
-            self.add_card(filename, color_name)
-        self.update()
+        try:
+            clothes = await asyncio.to_thread(load_clothes)
+            for filename, color_name in clothes:
+                self.add_card(filename, color_name)
+            self.update()
+        except Exception as e:
+            print(f"Error loading initial clothes: {e}")
 
     def add_card(self, filename, color_name):
         self.controls.insert(0, DisplayCard(self.delete_card_action,
