@@ -2,6 +2,7 @@ from io import BytesIO
 
 import requests
 
+from models.Tag import Tag
 from resources.auth import CLOTHES_MATCHING_API, REMOVE_BG_API, REMOVE_BG_API_KEY, REMOVE_BG_API_PASS
 
 
@@ -31,6 +32,21 @@ def detect_color(filename, remove_background_response):
     except requests.RequestException as e:
         print(f"Error detecting color: {e}")
         return ""
+
+
+def detect_tag(filename, remove_background_response):
+    try:
+        image_bytes = BytesIO(remove_background_response.content)
+        image_bytes.name = filename
+        response = requests.post(
+            f'{CLOTHES_MATCHING_API}/tag/',
+            files={'file': image_bytes}
+        )
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"Error detecting tag: {e}")
+        return Tag.UNKNOWN.value
 
 
 def remove_bg(file):
@@ -68,11 +84,12 @@ def load_clothes() -> list[tuple[str, str]]:
         return []
 
 
-def add_clothing_item(filename: str, dominant_color: str) -> None:
+def add_clothing_item(filename: str, dominant_color: str, tag: str) -> None:
     try:
         data = {
             "filename": filename,
-            "color": dominant_color
+            "color": dominant_color,
+            "tag": tag
         }
         response = requests.post(f'{CLOTHES_MATCHING_API}/add', data=data)
         response.raise_for_status()

@@ -1,7 +1,7 @@
 from flet.core.file_picker import FilePicker, FilePickerResultEvent, FilePickerFileType
 from flet.core.page import Page
 
-from endpoints.endpoints import upload_to_bucket, detect_color, remove_bg
+from endpoints.endpoints import upload_to_bucket, detect_color, remove_bg, detect_tag
 
 
 class FileUploader:
@@ -25,4 +25,5 @@ class FileUploader:
         remove_background_response = remove_bg(file)
         upload_to_bucket(file)
         color_name = detect_color(filename, remove_background_response)
-        self.add_new_item_action(filename, color_name)
+        tag = detect_tag(filename, remove_background_response)
+        self.add_new_item_action(filename, color_name, tag)

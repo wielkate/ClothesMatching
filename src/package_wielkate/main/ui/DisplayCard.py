@@ -1,3 +1,4 @@
+from flet import border
 from flet.core import alignment, padding
 from flet.core.border import BorderSide, Border
 from flet.core.colors import Colors
@@ -26,12 +27,13 @@ from ui.OptionsList import OptionsList
 
 
 class DisplayCard(Column):
-    def __init__(self, delete_card_action, edit_card_action, return_clothes_action, filename, color_name):
+    def __init__(self, delete_card_action, edit_card_action, return_clothes_action, filename, color_name, tag):
         super().__init__(
             scroll=ScrollMode.HIDDEN
         )
         self.filename = filename
         self.color_name = color_name
+        self.tag = tag
         self.delete_card_action = delete_card_action
         self.edit_card_action = edit_card_action
         self.return_clothes_action = return_clothes_action
@@ -94,7 +96,7 @@ class DisplayCard(Column):
                             stops=[0.0, 0.5, 0.8]
                         ),
                     ),
-                    # Text and icons on top of the gradient
+                    # Color name and icons on top of the gradient
                     Container(
                         padding=padding.only(left=20, right=20, bottom=25),
                         content=
@@ -132,7 +134,25 @@ class DisplayCard(Column):
                                 ),
                             ],
                         ),
-                    )
+                    ),
+                    # Tag
+                    Container(
+                        top=25,
+                        right=20,
+                        content=Container(
+                            padding=padding.symmetric(horizontal=10, vertical=4),
+                            bgcolor=Colors.WHITE,
+                            border=border.all(1, Colors.BLACK),
+                            border_radius=10,
+                            content=Text(
+                                self.tag,
+                                color=Colors.BLACK,
+                                text_align=TextAlign.CENTER,
+                                size=20,
+                                weight=FontWeight.NORMAL,
+                            ),
+                        ),
+                    ),
                 ]
             ),
         )

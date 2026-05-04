@@ -89,9 +89,9 @@ class App(Column):
 
         self.file_uploader.upload_files()
 
-    def _add_new_card_action(self, filename, color_name):
-        add_clothing_item(filename, color_name)
-        self.display_cards.add_card(filename, color_name)
+    def _add_new_card_action(self, filename, color_name, tag):
+        add_clothing_item(filename, color_name, tag)
+        self.display_cards.add_card(filename, color_name, tag)
         self.update()
 
     def _delete_card_action(self, card):

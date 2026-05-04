@@ -21,18 +21,19 @@ class DisplayCards(Row):
     async def load_initial(self):
         try:
             clothes = await asyncio.to_thread(load_clothes)
-            for filename, color_name in clothes:
-                self.add_card(filename, color_name)
+            for filename, color_name, tag in clothes:
+                self.add_card(filename, color_name, tag)
             self.update()
         except Exception as e:
             print(f"Error loading initial clothes: {e}")
 
-    def add_card(self, filename, color_name):
+    def add_card(self, filename, color_name, tag):
         self.controls.insert(0, DisplayCard(self.delete_card_action,
                                             self.edit_card_action,
                                             self.return_clothes_action,
                                             filename,
-                                            color_name
+                                            color_name,
+                                            tag
                                             )
                              )
         self.scroll_to(offset=0, duration=2000, curve=AnimationCurve.EASE_IN_OUT)
