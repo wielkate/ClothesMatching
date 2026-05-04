@@ -171,7 +171,7 @@ class DisplayCard(Column):
         if not colors:
             return []
 
-        ids = get_ids(colors, self.filename)
+        ids = get_ids(colors, self.filename, self.tag)
         return [MatchCard(id) for id in ids]
 
     def _select_color(self, e):

@@ -3,35 +3,36 @@
 Clothes Matcher is an application designed to help color-blind individuals match their clothing items based on color.
 
 A cross-platform Python application built with [Flet](https://flet.dev/).
-This frontend provides an intuitive, mobile-first interface for uploading clothing images and visualizing matching
-suggestions retrieved from the backend API.
+This frontend provides an intuitive, mobile-first interface for uploading clothing, viewing AI-powered classifications, and browsing color-matched outfit suggestions.
 Visit [this page](https://github.com/wielkate/ClothesMatchingApi) to learn more about backend part.
 
 ## Features
 
-- **Accessible Design** – welcome animation, clean UI, large touch targets, high contrast.
+- **AI Classification** – items are automatically categorized by type (top, bottom, mid-layer, outerwear). Available in the apk branch.
 - **Real-time Suggestions** – display matched clothing items based on color analysis.
-- **Cross-platform** – works on desktop, mobile, and web (via Flet).
-- **Integration with Backend API** – connects to FastAPI service with Supabase storage and database.
 - **Remove background:** Uses [Rembg](https://www.rembg.com/en) API do remove background before primary color
   determination
+- **Cross-platform** – works on desktop, mobile, and web (via Flet).
+- **Accessible Design** – welcome animation, clean UI, large touch targets, high contrast.
+- **Integration with Backend API** – connects to FastAPI service with Supabase storage and database.
 
 ## Navigation
 
 This repository has two branches:
 
-- **master** - has both frontend and backend in one code base
-- **apk** - delegates backend to several APIs, prepare for publishing on Android
-
+- **master** - Monorepo. Frontend and backend bundled together in one codebase (old)
+- **apk** - Standalone frontend. Delegates all processing to external APIs, includes AI classification, packaged for Android (default)
 ## UI Screens
 
 ![Screen1](docs/image1.png)
 ![Screen2](docs/image2.png)
+![Screen3](docs/image3.png)
 
 ## Tech Stack
 
 - **Language:** Python 3.12+
 - **Framework:** Flet
+- **AI Classification:** Google Gemini API (`gemini-2.5-flash-lite`)
 - **Communication:** REST API calls to backend and Rembg API
 
 ## Installation

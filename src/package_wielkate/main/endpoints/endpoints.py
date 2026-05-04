@@ -132,11 +132,12 @@ def get_matched_colors(mode: str, color: str):
         return []
 
 
-def get_ids(colors: list[str], exclude_id: str):
+def get_ids(colors: list[str], exclude_id: str, exclude_tag: str):
     try:
         data = {
             "colors": colors,
-            "exclude_id": exclude_id
+            "exclude_id": exclude_id,
+            "exclude_tag": exclude_tag
         }
         response = requests.post(f'{CLOTHES_MATCHING_API}/get_ids', data=data)
         response.raise_for_status()
